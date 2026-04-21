@@ -5,7 +5,9 @@
     font-family: sans-serif;
 }
 
-body {
+/* CSS tela de cadastro */
+
+#tela-cadastro {
     background-color: #f4f4f9;
     display: flex;
     justify-content: center;
@@ -26,8 +28,8 @@ body {
     box-shadow: 0 10px 25px #00000018;
 }
 
-.login {
-    padding: 40px;
+.lado-esquerdo {
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,20 +39,25 @@ body {
 }
 
 .logo {
-    margin-bottom: 40px;
+    margin-bottom: 55px;
+    align-self: flex-start;
 }
 
-.login h2 {
+.logo-tipo{
+    width: 120px;
+}
+
+.lado-esquerdo h2 {
     font-size: 28px;
     margin-bottom: 20px;
 }
 
-.login p {
+.lado-esquerdo p {
     font-size: 14px;
     margin-bottom: 30px;
 }
 
-.cadastro {
+.lado-direito {
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -58,11 +65,11 @@ body {
     align-items: center;
 }
 
-.cadastro h2 {
+.lado-direito h2 {
     margin-bottom: 30px;
 }
 
-#form-cadastro {
+.form-cadastro {
     width: 100%;
     max-width: 320px;
     display: flex;
@@ -81,7 +88,7 @@ body {
 
 .botao {
     background: none;
-    border: 2px solid #333;
+    border: 2px solid #000000;
     padding: 10px 30px;
     border-radius: 12px;
     cursor: pointer;
@@ -92,8 +99,13 @@ body {
 }
 
 .botao:hover {
+    color: #ffffff;
     background-color: #333;
-    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
 }
 
 @media (max-width: 768px) {
@@ -102,7 +114,7 @@ body {
         max-width: 450px;
     }
 
-    .login {
+    .lado-esquerdo {
         border-right: none;
         border-bottom: 1.5px solid #333;
         padding: 30px;
@@ -110,5 +122,34 @@ body {
 
     .logo {
         margin-bottom: 20px;
+        align-self: center;
+        text-align: center;
+        
     }
+}
+
+/* CSS tela de login */
+
+#tela-login {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#esqueci-senha {
+    width: 100%; 
+    max-width: 320px; 
+    text-align: right; 
+    margin-top: -5px; 
+    padding-bottom: 10px;
+    align-self: center;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+#esqueci-senha:hover {
+    color: blue;
 }

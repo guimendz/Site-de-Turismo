@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
     <link rel="stylesheet" href="Assets/css/style.css">
+    <title>Login</title>
 </head>
-<body id="tela-cadastro">
+<body id="tela-login">
 
     <main class="container">
         <section class="lado-esquerdo">
             <div class="logo">
                 <img class="logo-tipo" src="" alt="Logo">
             </div>
-            
-            <h2>Bem vindo de volta</h2>
-            <p>Acesse sua conta agora mesmo</p>
-                <a href="Login.html"><button class="botao">Entrar</button></a>
+
+            <h2>Novo por aqui?</h2>
+            <p>Crie sua conta agora mesmo</p>
+            <a href="Cadastro.html"><button class="botao">Cadastrar</button></a>
         </section>
 
         <section class="lado-direito">
-            <h2>Crie sua conta</h2>
-            
-            <form class="form-cadastro">
-                <div class="campo-form">
-                    <input id="nome" type="text" placeholder="Nome" required>
-                </div>
+            <h2>Acessa sua conta</h2>
 
+            <form class="form-cadastro">
                 <div class="campo-form">
                     <input id="email" type="email" placeholder="Email" required>
                 </div>
@@ -35,8 +31,11 @@
                     <input id="senha" type="password" placeholder="Senha" required>
                 </div>
 
-                <button type="submit" class="botao">Cadastrar</button>
+                <a id="esqueci-senha" href="#">Esqueci a senha?</a>
+                
+                <button class="botao" type="submit">Entrar</button>
             </form>
+            
         </section>
     </main>
 
