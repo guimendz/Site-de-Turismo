@@ -7,7 +7,7 @@
 
 /* CSS tela de cadastro */
 
-#tela-cadastro {
+.cadastro-login {
     background-color: #f4f4f9;
     display: flex;
     justify-content: center;
@@ -40,7 +40,7 @@
 
 .logo {
     margin-bottom: 55px;
-    align-self: flex-start;
+    align-self: center;
 }
 
 .logo-tipo{
@@ -67,6 +67,10 @@
 
 .lado-direito h2 {
     margin-bottom: 30px;
+}
+
+.rotulo-form {
+    display: none;
 }
 
 .form-cadastro {
@@ -130,15 +134,6 @@ a {
 
 /* CSS tela de login */
 
-#tela-login {
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-}
-
 #esqueci-senha {
     width: 100%; 
     max-width: 320px; 
@@ -153,3 +148,4 @@ a {
 #esqueci-senha:hover {
     color: blue;
 }
+
