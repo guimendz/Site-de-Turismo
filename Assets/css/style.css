@@ -23,7 +23,7 @@
     border: 1.5px solid #333;
     border-radius: 20px;
     display: grid;
-    grid-template-columns: 1fr 1.5fr; 
+    grid-template-columns: 1fr 1.4fr; 
     overflow: hidden;
     box-shadow: 0 10px 25px #00000018;
 }
@@ -88,6 +88,7 @@
     border-radius: 8px;
     outline: none;
     transition: border-color 0.2s;
+    color:grey;
 }
 
 .botao {
