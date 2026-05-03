@@ -5,7 +5,7 @@
     font-family: sans-serif;
 }
 
-/* CSS tela de cadastro */
+/* Tela de cadastro */
 
 .cadastro-login {
     background-color: #f4f4f9;
@@ -16,14 +16,14 @@
     padding: 20px;
 }
 
-.container {
+.container-cadastro {
     background-color: #fff;
     width: 100%;
-    max-width: 900px;
+    max-width: 450px;
     border: 1.5px solid #333;
     border-radius: 20px;
     display: grid;
-    grid-template-columns: 1fr 1.4fr; 
+    grid-template-columns: 1fr; 
     overflow: hidden;
     box-shadow: 0 10px 25px #00000018;
 }
@@ -35,15 +35,16 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-right: 1.5px solid #333;
+    border-bottom: 1.5px solid #000000; 
 }
 
 .logo {
-    margin-bottom: 55px;
+    margin-bottom: 20px;
     align-self: center;
+    text-align: center;
 }
 
-.logo-tipo{
+.logo-tipo {
     width: 120px;
 }
 
@@ -54,11 +55,12 @@
 
 .lado-esquerdo p {
     font-size: 14px;
+    margin-top: 20px;
     margin-bottom: 30px;
 }
 
 .lado-direito {
-    padding: 40px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,10 +90,10 @@
     border-radius: 8px;
     outline: none;
     transition: border-color 0.2s;
-    color:grey;
+    color: grey;
 }
 
-.botao {
+.botao-tipo1{
     background: none;
     border: 2px solid #000000;
     padding: 10px 30px;
@@ -103,7 +105,11 @@
     align-self: center;
 }
 
-.botao:hover {
+#botao-entrar {
+    margin-top: 35px;
+}
+
+.botao-tipo1:hover {
     color: #ffffff;
     background-color: #333;
 }
@@ -113,33 +119,13 @@ a {
     color: #000000;
 }
 
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr; 
-        max-width: 450px;
-    }
-
-    .lado-esquerdo {
-        border-right: none;
-        border-bottom: 1.5px solid #333;
-        padding: 30px;
-    }
-
-    .logo {
-        margin-bottom: 20px;
-        align-self: center;
-        text-align: center;
-        
-    }
-}
-
-/* CSS tela de login */
+/* Tela de login */
 
 #esqueci-senha {
-    width: 100%; 
-    max-width: 320px; 
-    text-align: right; 
-    margin-top: -5px; 
+    width: 100%;
+    max-width: 320px;
+    text-align: right;
+    margin-top: -5px;
     padding-bottom: 10px;
     align-self: center;
     text-decoration: underline;
@@ -148,5 +134,224 @@ a {
 
 #esqueci-senha:hover {
     color: blue;
+}
+
+#tela-login {
+    height: 90vh; 
+}
+
+#acesse-conta {
+    margin-bottom: 55px;
+}
+
+/* Tela de dados pessoais */
+
+#pagina-dados {
+    background-color: #fff;
+    color: black;
+}
+
+.container-dados {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar-dados-pessoais {
+    margin-bottom: 40px;
+}
+
+.logo-tela-dados {
+    margin: 15px 0px 60px 10px;
+    width: 120px;
+    display: block;
+}
+
+.sidebar-dados {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.sidebar-dados a {
+    border-radius: 5px;
+    padding: 5px 8px;
+    width: fit-content;
+}
+
+.sidebar-dados a:hover {
+    background-color: rgb(167, 164, 164)
+}
+
+#tela-atual {
+    background-color: rgb(222, 217, 217);
+}
+
+#tela-atual:hover {
+    background-color: rgb(167, 164, 164);
+}
+
+.dados-pessoais {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.dados-pessoais h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.dados-pessoais p {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.form-dados {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+.campo-dados {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+.campo-dados input {
+    width: 98%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.botoes-dados {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.botao-tipo2 {
+    background: none;
+    border: 2px solid #000000;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.botao-tipo2:hover {
+    background-color: #333;
+    color: #ffffff;
+}
+
+#botao-excluir {
+    border-color: #ff0000;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+#botao-excluir:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+/* Tela de alteração de dados pessoais */
+
+#botao-alterar {
+    border-color: #2DC75C;
+    color: #2DC75C;
+    font-weight: bold;
+    width: auto;
+}
+
+#botao-alterar:hover {
+    background-color: #2DC75C;
+    color: #ffffff;
+}
+
+/* Responsividade Web */
+
+@media (min-width: 768px) {
+    .container-cadastro {
+        max-width: 900px;
+        grid-template-columns: 1fr 1.4fr;
+    }
+
+    .lado-esquerdo {
+        border-bottom: none;
+        border-right: 1.5px solid #333;
+        padding: 30px;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .lado-direito {
+        padding: 40px;
+    }
+
+    #tela-login {
+        height: 70vh;
+    }
+
+    .logo-tela-dados {
+        margin: 15px 0px 60px 10px;
+    }
+
+    .sidebar-dados {
+        font-size: 17px;
+    }
+
+    .container-dados {
+        display: grid;
+        grid-template-columns: minmax(180px, 250px) 1fr; 
+        gap: 40px;
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .container-dados h1 {
+        margin-top: 5px;
+    }
+
+    .container-dados p {
+        margin-top: 20px;
+    }
+
+    .form-dados {
+        grid-template-columns: 1fr 1fr; 
+        max-width: 800px;
+    }
+
+    #campo-full-width {
+        grid-column: 1 / -1; 
+    }
+
+    .botoes-dados {
+        grid-column: 1 / -1;
+        flex-direction: row; 
+        justify-content: space-aro;
+    }
+
+    .botao-tipo2 {
+        width: 160px;
+        text-align: center;
+    }
+
 }
 

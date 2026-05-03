@@ -3,73 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Assets/css/style.css">
     <title>Dados Pessoais</title>
 </head>
-<body>
 
-<header>
-    <img src="" alt="Logo">
-</header>
+<body id="pagina-dados">
 
-<main>
+<main class="container-dados">
 
-    <aside>
-        <nav>
-            <a href="#">&lt; Voltar</a>
-            <a href="#">Dados Pessoais</a>
-            <a href="#">Histórico</a>
+    <aside class="sidebar-dados-pessoais">
+
+        <div><img class="logo-tela-dados" src="" alt="Logo"></div>
+
+        <nav class="sidebar-dados">
+            <a href="#" class="voltar">&lt; Voltar</a>
+            <a id="tela-atual" href="dados-usuario.html">Dados Pessoais</a>
+            <a href="historico-pacotes.html">Histórico</a>
             <a href="#">Sair</a>
         </nav>
     </aside>
 
-    <section>
-        <h1>Dados Pessoais</h1>
-        <h2>Verifique ou altere seus dados</h2>
+    <section class="dados-pessoais">
+            <h1>Dados Pessoais</h1>
+            <p>Verifique ou altere seus dados</p>
 
-        <form>
-
-            <div>
+        <form class="form-dados">
+            <div class="campo-dados">
                 <label for="nome">Nome</label>
                 <input id="nome" name="nome" type="text">
             </div>
 
-            <div>
+            <div class="campo-dados">
                 <label for="email">Email</label>
                 <input id="email" name="email" type="email">
             </div>
 
-            <div>
+            <div class="campo-dados">
                 <label for="senha">Senha</label>
                 <input id="senha" name="senha" type="password">
             </div>
 
-            <div>
+            <div class="campo-dados">
                 <label for="cpf">CPF</label>
                 <input id="cpf" name="cpf" type="text">
             </div>
 
-            <div>
+            <div class="campo-dados">
                 <label for="nascimento">Data de Nascimento</label>
                 <input id="nascimento" name="nascimento" type="date">
             </div>
 
-            <div>
+            <div class="campo-dados">
                 <label for="telefone">Telefone</label>
                 <input id="telefone" name="telefone" type="tel">
             </div>
 
-            <div>
+            <div id="campo-full-width" class="campo-dados">
                 <label for="endereco">Endereço</label>
                 <input id="endereco" name="endereco" type="text">
             </div>
 
-            <button type="button">Excluir conta</button>
-            <a href="">Alterar Dados</a>
-
+            <div class="botoes-dados">
+                <button class="botao-tipo2" id="botao-excluir" type="button">Excluir conta</button>
+                <a class="botao-tipo2" href="alterar-dados.html">Alterar dados</a>
+            </div>
         </form>
     </section>
-
 </main>
 
 </body>
+</html>
