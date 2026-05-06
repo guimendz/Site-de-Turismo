@@ -6,76 +6,77 @@
     <link rel="stylesheet" href="Assets/css/style.css">
     <title>Histórico de pacotes</title>
 </head>
-<body>
+<body id="pagina-dados">
 
-<main>
+<main class="container-dados">
 
-    <aside>
+    <aside class="sidebar-dados-pessoais">
 
-        <div><img class="logo-tela-dados" src="" alt="Logo"></div>
+        <div>
+            <img class="logo-tela-dados" src="" alt="Logo">
+        </div>
 
-        <nav>
-            <a href="#">&lt; Voltar</a>
-            <a href="#">Dados Pessoais</a>
-            <a href="#" class="ativo">Histórico</a>
+        <nav class="sidebar-dados">
+            <a href="javascript:history.back()" class="voltar">&lt; Voltar</a>
+            <a href="index.html">Página inicial</a>
+            <a href="dados-usuario.html">Dados Pessoais</a>
+            <a class="tela-atual" href="historico-pacotes.html">Histórico</a>
             <a href="#">Sair</a>
         </nav>
     </aside>
 
-    <section>
+    <section class="historico">
+
         <h1>Histórico</h1>
-        <h2>Veja seu histórico de viagens</h2>
+        <p id="sub-titulo">Veja seu histórico de viagens</p>
 
-        <article class="card">
+        <div class="lista-historico">
 
-            <div class="card-info">
-                <h3>Paris, França</h3>
+            <div class="card-historico">
 
-                <p><strong>Destino:</strong> Paris, França</p>
-                <p><strong>Data da viagem:</strong> 12 a 18 Set 2027</p>
-                <p><strong>Valor pago:</strong> R$ 7.500,00</p>
-                <p><strong>Hotel:</strong> Ritz Paris</p>
-                <p><strong>Intérprete:</strong> Joaquim Muniz</p>
-            </div>
+                <div class="info-historico">
+                    <h2>Paris, França</h2>
 
-            <div class="card-image">
-                <div class="img-placeholder">
-                    <img src="" alt="Foto-viagem">
+                    <div class="grid-info">
+                        <p><strong>Destino</strong> Paris, França</p>
+                        <p><strong>Data da viagem</strong> 12 a 18 Set 2027</p>
+                        <p><strong>Valor pago</strong> R$ 7.500,00</p>
+                        <p><strong>Hotel</strong> Ritz Paris</p>
+                        <p><strong>Intérprete</strong> Joaquim Muniz</p>
+                    </div>
+
+                    <a href="#" class="detalhes">Mostrar detalhes</a>
                 </div>
-                <a href="#" class="detalhes">Mostrar detalhes</a>
+
             </div>
-
-        </article>
-
-        <div class="card-actions">
-            <button class="cancelar">Cancelar pedido</button>
-            <button class="">Gerar nota fiscal</button>
-        </div>
-
-        <article class="card">
-
-            <div class="card-info">
-                <h3>Veneza, Itália</h3>
-
-                <p><strong>Destino:</strong> Veneza, Itália</p>
-                <p><strong>Data da viagem:</strong> 22 a 28 Jun 2027</p>
-                <p><strong>Valor pago:</strong> R$ 8.200,00</p>
-                <p><strong>Hotel:</strong> The Gritti Palace</p>
-                <p><strong>Intérprete:</strong> Cecília Pereira</p>
-            </div>
-
-            <div class="card-image">
-                <div class="img-placeholder">
-                    <img src="" alt="Foto-viagem">
+            
+                <div class="acoes-historico">
+                    <button class="botao-tipo3 botao-gerar">Gerar Nota Fiscal</button>
+                    <button class="botao-tipo3 botao-cancelar">Cancelar</button>
                 </div>
-                <a href="#" class="detalhes">Mostrar detalhes</a>
+
+            <div class="card-historico"id="card-historico2">
+
+                <div class="info-historico">
+                    <h2>Paris, França</h2>
+
+                    <div class="grid-info">
+                        <p><strong>Destino</strong> Paris, França</p>
+                        <p><strong>Data da viagem</strong> 12 a 18 Set 2027</p>
+                        <p><strong>Valor pago</strong> R$ 7.500,00</p>
+                        <p><strong>Hotel</strong> Ritz Paris</p>
+                        <p><strong>Intérprete</strong> Joaquim Muniz</p>
+                    </div>
+
+                    <a href="#" class="detalhes">Mostrar detalhes</a>
+                </div>
+
             </div>
 
-        </article>
-
-        <div class="card-actions">
-            <button class="cancelar">Cancelar pedido</button>
-            <button class="">Gerar nota fiscal</button>
+                <div class="acoes-historico">
+                    <button class="botao-tipo3 botao-gerar">Gerar Nota Fiscal</button>
+                    <button class="botao-tipo3 botao-cancelar">Cancelar</button>
+                </div>
         </div>
 
     </section>
@@ -83,3 +84,4 @@
 </main>
 
 </body>
+</html>

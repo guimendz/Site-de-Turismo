@@ -177,28 +177,31 @@ a {
 }
 
 .sidebar-dados a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
     border-radius: 5px;
     padding: 5px 8px;
     width: fit-content;
 }
 
 .sidebar-dados a:hover {
-    background-color: rgb(167, 164, 164)
+    background-color: rgb(167, 164, 164);
+    transition: all 0.5s ease;
+    text-decoration: underline;
 }
 
-#tela-atual {
+.tela-atual {
     background-color: rgb(222, 217, 217);
 }
 
-#tela-atual:hover {
+.tela-atual:hover {
     background-color: rgb(167, 164, 164);
 }
 
 .dados-pessoais {
-    background-color: #f0f0f0;
     font-weight: bold;
-    padding: 15px;
-    border-radius: 15px;
 }
 
 .dados-pessoais h1 {
@@ -216,6 +219,10 @@ a {
     display: grid;
     grid-template-columns: 1fr; 
     gap: 20px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-left: -20px;
+    border-radius: 15px;
 }
 
 .campo-dados {
@@ -281,6 +288,121 @@ a {
     color: #ffffff;
 }
 
+/* Tela histórico de pacotes */
+
+.historico h1 {
+    margin-bottom: 10px;
+}
+
+#sub-titulo {
+    margin-top: 25px;
+}
+
+.historico p {
+    margin-bottom: 30px;
+}
+
+.lista-historico {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card-historico {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#card-historico2 {
+    margin-top: 100px;
+}
+
+.info-historico {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-historico h2 {
+    margin-bottom: 35px;
+}
+
+.grid-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));    
+    gap: 20px 120px; 
+    align-items: center;
+}
+
+.grid-info p {
+    display: contents;
+}
+
+.grid-info strong {
+    grid-column: 1;
+    font-weight: bold;
+}
+
+.detalhes {
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.detalhes:hover {
+    color:#14018fcf
+}
+
+.acoes-historico {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.botao-tipo3 {
+    background: none;
+    border: 2px solid ;
+    padding: 15px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.5s ease;
+    margin-top: 10px;
+    align-self: center;
+    width: 300px;
+}
+
+.botao-gerar {
+    background-color: #0b8d34;
+    color: #ffffff;
+    
+}
+
+.botao-gerar:hover {
+    background-color: #2DC75C;
+    color:#ffffff;
+    border-color: #209543
+}
+
+.botao-cancelar {
+    background-color:#bd0a0a;
+    color: #ffffff;
+    
+}
+
+.botao-cancelar:hover {
+    background-color: #ff0000;
+    color:#ffffff;
+    border-color: #af0a0a;
+}
+
 /* Responsividade Web */
 
 @media (min-width: 768px) {
@@ -325,6 +447,11 @@ a {
         padding: 40px 20px;
     }
 
+    #card-historico2 {
+    margin-top: 60px;
+
+    }
+
     .container-dados h1 {
         margin-top: 5px;
     }
@@ -345,12 +472,59 @@ a {
     .botoes-dados {
         grid-column: 1 / -1;
         flex-direction: row; 
-        justify-content: space-aro;
+        justify-content: space-between;
     }
 
     .botao-tipo2 {
-        width: 160px;
+        width: 220px;
         text-align: center;
+    }
+
+    .card-historico {
+        display: flex;
+        flex-direction: column;
+        position: relative; 
+        padding: 30px 40px;
+        border-radius: 15px;
+        margin-left: -25px;
+    }
+
+    .info-historico h2 {
+        margin-bottom: 30px;
+    }
+
+    .grid-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));    
+        gap: 20px 120px; 
+        align-items: center;
+    }
+
+    .grid-info p {
+        display: contents;
+    }
+
+    .grid-info strong{
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    .detalhes {
+        align-self: flex-end; 
+        margin-top: 10px;
+        text-decoration: underline;
+        color: #333;
+    }
+
+    .acoes-historico {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+        width: 100%;
+    }
+
+    .botao-tipo3 {
+        width: 220px;
     }
 
 }
