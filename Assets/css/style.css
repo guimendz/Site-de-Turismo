@@ -166,6 +166,15 @@ a {
 }
 
 .sidebar-dados-pessoais {
+    width: 100%;
+    overflow: hidden;
+    max-height: 0; /* Escondido por padrão no mobile */
+    transition: max-height 0.4s ease;
+    margin-bottom: 0; /* Ajustado para não criar espaço quando fechado */
+}
+
+.sidebar-dados-pessoais.home-navbar-active {
+    max-height: 500px;
     margin-bottom: 40px;
 }
 
@@ -757,6 +766,19 @@ a {
         max-width: 1200px;
         margin: 0 auto;
         padding: 40px 20px;
+    }
+
+    .sidebar-dados-pessoais {
+        max-height: none; /* Sempre visível no desktop */
+        overflow: visible;
+        margin-bottom: 40px;
+        /* Opcional: faz a sidebar acompanhar o scroll */
+        position: sticky;
+        top: 100px; 
+    }
+
+    .home-header-menu-toggle {
+        display: none;
     }
 
     #card-historico2 {

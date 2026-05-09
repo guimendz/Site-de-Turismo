@@ -38,9 +38,9 @@
 
     <main class="container-dados">
 
-        <aside class="sidebar-dados-pessoais">
+         <aside class="sidebar-dados-pessoais" id="tiNavbar">
             <nav class="sidebar-dados">
-                <a href="javascript:history.back()">&lt; Voltar</a>
+                <a href="javascript:history.back()" class="voltar">&lt; Voltar</a>
                 <a href="index.html">Página inicial</a>
                 <a class="tela-atual" href="dados-usuario.html">Dados Pessoais</a>
                 <a href="historico-reservas.html">Histórico de reservas</a>
@@ -112,29 +112,14 @@
                 <ul class="home-footer-list">
                     <li class="home-footer-item"><a href="#">Início</a></li>
                     <li class="home-footer-item"><a href="#">Pacotes</a></li>
-                    <li class="home-footer-item"><a href="#">Sobre nós</a></li>
-                    <li class="home-footer-item"><a href="#">Como funciona</a></li>
-                    <li class="home-footer-item"><a href="#">Contato</a></li>
                 </ul>
             </nav>
-
-            <section>
-                <h4 class="home-footer-column-title">Ajuda</h4>
-                <ul class="home-footer-list">
-                    <li class="home-footer-item">Perguntas frequentes</li>
-                    <li class="home-footer-item">Política de privacidade</li>
-                    <li class="home-footer-item">Termos de uso</li>
-                    <li class="home-footer-item">Cancelamentos</li>
-                </ul>
-            </section>
 
             <section>
                 <h4 class="home-footer-column-title">Contato</h4>
                 <ul class="home-footer-list">
                     <li class="home-footer-item">contato@empresa.com</li>
                     <li class="home-footer-item">(11) 99999-9999</li>
-                    <li class="home-footer-item">Instagram</li>
-                    <li class="home-footer-item">WhatsApp</li>
                 </ul>
             </section>
         </div>
@@ -143,6 +128,19 @@
             © 2024 Nome da Empresa. Todos os direitos reservados.
         </div>
     </footer>
+
+     <script>
+    // Seleciona o botão hambúrguer pelo ID
+    const tiMenuToggle = document.getElementById("tiMenuToggle");
+    // Seleciona a Sidebar (que agora tem o ID tiNavbar)
+    const tiNavbar = document.getElementById("tiNavbar");
+
+    // Adiciona o evento de clique
+    tiMenuToggle.addEventListener("click", () => {
+        // Liga/Desliga a classe que define a altura máxima (max-height)
+        tiNavbar.classList.toggle("home-navbar-active");
+    });
+</script>
 
 </body>
 
