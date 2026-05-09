@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,70 +10,141 @@
 
 <body id="pagina-dados">
 
-<main class="container-dados">
+    <header class="home-header">
+        <div class="home-container home-header-wrapper">
+            <button class="home-header-menu-toggle" id="tiMenuToggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-    <aside class="sidebar-dados-pessoais">
+            <div class="home-header-logo">
+                <img src="#" alt="Logo">
+            </div>
 
-        <div>
-            <img class="logo-tela-dados" src="Assets/img/Logo-tipo.jpg" alt="Logo">
+            <a href="dados-usuario.html" class="home-header-login">
+                👤
+                <span>Entrar</span>
+            </a>
+
+            <nav class="home-header-navbar" id="tiNavbar">
+                <ul class="home-header-nav-list">
+                    <li><a href="#" class="home-header-nav-link">Início</a></li>
+                    <li><a href="#" class="home-header-nav-link">Catálogo</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <nav class="sidebar-dados">
-            <a href="javascript:history.back()" class="voltar">&lt; Voltar</a>
-            <a href="index.html">Página inicial</a>
-            <a class="tela-atual" href="dados-usuario.html">Dados Pessoais</a>
-            <a href="historico-reservas.html">Histórico de reservas</a>
-            <a href="#">Sair</a>
-        </nav>
-    </aside>
+    <main class="container-dados">
 
-    <section class="dados-pessoais">
+        <aside class="sidebar-dados-pessoais">
+            <nav class="sidebar-dados">
+                <a href="javascript:history.back()" class="voltar">&lt; Voltar</a>
+                <a href="index.html">Página inicial</a>
+                <a class="tela-atual" href="dados-usuario.html">Dados Pessoais</a>
+                <a href="historico-reservas.html">Histórico de reservas</a>
+                <a href="#">Sair</a>
+            </nav>
+        </aside>
+
+        <section class="dados-pessoais">
             <h1>Dados Pessoais</h1>
             <p>Verifique ou altere seus dados</p>
 
-        <form class="form-dados">
-            <div class="campo-dados">
-                <label for="nome">Nome</label>
-                <input id="nome" name="nome" type="text">
-            </div>
+            <form class="form-dados">
+                <div class="campo-dados">
+                    <label for="nome">Nome</label>
+                    <input id="nome" name="nome" type="text">
+                </div>
 
-            <div class="campo-dados">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email">
-            </div>
+                <div class="campo-dados">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email">
+                </div>
 
-            <div class="campo-dados">
-                <label for="senha">Senha</label>
-                <input id="senha" name="senha" type="password">
-            </div>
+                <div class="campo-dados">
+                    <label for="senha">Senha</label>
+                    <input id="senha" name="senha" type="password">
+                </div>
 
-            <div class="campo-dados">
-                <label for="cpf">CPF</label>
-                <input id="cpf" name="cpf" type="text">
-            </div>
+                <div class="campo-dados">
+                    <label for="cpf">CPF</label>
+                    <input id="cpf" name="cpf" type="text">
+                </div>
 
-            <div class="campo-dados">
-                <label for="nascimento">Data de Nascimento</label>
-                <input id="nascimento" name="nascimento" type="date">
-            </div>
+                <div class="campo-dados">
+                    <label for="nascimento">Data de Nascimento</label>
+                    <input id="nascimento" name="nascimento" type="date">
+                </div>
 
-            <div class="campo-dados">
-                <label for="telefone">Telefone</label>
-                <input id="telefone" name="telefone" type="tel">
-            </div>
+                <div class="campo-dados">
+                    <label for="telefone">Telefone</label>
+                    <input id="telefone" name="telefone" type="tel">
+                </div>
 
-            <div id="campo-full-width" class="campo-dados">
-                <label for="endereco">Endereço</label>
-                <input id="endereco" name="endereco" type="text">
-            </div>
+                <div id="campo-full-width" class="campo-dados">
+                    <label for="endereco">Endereço</label>
+                    <input id="endereco" name="endereco" type="text">
+                </div>
 
-            <div class="botoes-dados">
-                <button class="botao-tipo2" id="botao-excluir" type="button">Excluir conta</button>
-                <a class="botao-tipo2" href="alterar-dados.html">Alterar dados</a>
-            </div>
-        </form>
-    </section>
-</main>
+                <div class="botoes-dados">
+                    <button class="botao-tipo2" id="botao-excluir" type="button">Excluir conta</button>
+                    <a class="botao-tipo2" href="alterar-dados.html">Alterar dados</a>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="home-footer">
+        <div class="home-container home-footer-wrapper">
+            <section>
+                <div class="home-footer-logo">
+                    <img src="" alt="Logo">
+                </div>
+                <p class="home-footer-text" style="margin-top: 1rem;">
+                    Turismo acessível e inclusivo para você viver o melhor do mundo com tranquilidade.
+                </p>
+            </section>
+
+            <nav>
+                <h4 class="home-footer-column-title">Navegação</h4>
+                <ul class="home-footer-list">
+                    <li class="home-footer-item"><a href="#">Início</a></li>
+                    <li class="home-footer-item"><a href="#">Pacotes</a></li>
+                    <li class="home-footer-item"><a href="#">Sobre nós</a></li>
+                    <li class="home-footer-item"><a href="#">Como funciona</a></li>
+                    <li class="home-footer-item"><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+
+            <section>
+                <h4 class="home-footer-column-title">Ajuda</h4>
+                <ul class="home-footer-list">
+                    <li class="home-footer-item">Perguntas frequentes</li>
+                    <li class="home-footer-item">Política de privacidade</li>
+                    <li class="home-footer-item">Termos de uso</li>
+                    <li class="home-footer-item">Cancelamentos</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4 class="home-footer-column-title">Contato</h4>
+                <ul class="home-footer-list">
+                    <li class="home-footer-item">contato@empresa.com</li>
+                    <li class="home-footer-item">(11) 99999-9999</li>
+                    <li class="home-footer-item">Instagram</li>
+                    <li class="home-footer-item">WhatsApp</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="home-footer-copyright">
+            © 2024 Nome da Empresa. Todos os direitos reservados.
+        </div>
+    </footer>
 
 </body>
+
 </html>

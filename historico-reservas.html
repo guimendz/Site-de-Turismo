@@ -1,87 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/css/style.css">
     <title>Histórico de reservas</title>
 </head>
+
 <body id="pagina-dados">
 
-<main class="container-dados">
+    <header class="home-header">
+        <div class="home-container home-header-wrapper">
+            <button class="home-header-menu-toggle" id="tiMenuToggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-    <aside class="sidebar-dados-pessoais">
-
-        <div>
-            <img class="logo-tela-dados" src="Assets/img/Logo-tipo.jpg" alt="Logo">
-        </div>
-
-        <nav class="sidebar-dados">
-            <a href="javascript:history.back()" class="voltar">&lt; Voltar</a>
-            <a href="index.html">Página inicial</a>
-            <a href="dados-usuario.html">Dados Pessoais</a>
-            <a class="tela-atual" href="historico-reservas.html">Histórico de reservas</a>
-            <a href="#">Sair</a>
-        </nav>
-    </aside>
-
-    <section class="historico">
-
-        <h1>Histórico</h1>
-        <p id="sub-titulo">Veja seu histórico de viagens</p>
-
-        <div class="lista-historico">
-
-            <div class="card-historico">
-
-                <div class="info-historico">
-                    <h2>Paris, França</h2>
-
-                    <div class="grid-info">
-                        <p><strong>Destino</strong> Paris, França</p>
-                        <p><strong>Data da viagem</strong> 12 a 18 Set 2027</p>
-                        <p><strong>Valor pago</strong> R$ 7.500,00</p>
-                        <p><strong>Hotel</strong> Ritz Paris</p>
-                        <p><strong>Intérprete</strong> Joaquim Muniz</p>
-                    </div>
-
-                    <a href="#" class="detalhes">Mostrar detalhes</a>
-                </div>
-
+            <div class="home-header-logo">
+                <img src="#" alt="Logo">
             </div>
-            
+
+            <a href="dados-usuario.html" class="home-header-login">
+                👤
+                <span>Entrar</span>
+            </a>
+
+            <nav class="home-header-navbar" id="tiNavbar">
+                <ul class="home-header-nav-list">
+                    <li><a href="#" class="home-header-nav-link">Início</a></li>
+                    <li><a href="#" class="home-header-nav-link">Catálogo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-dados">
+
+        <aside class="sidebar-dados-pessoais" id="sidebar-historico">
+            <nav class="sidebar-dados">
+                <a href="javascript:history.back()" class="voltar">&lt; Voltar</a>
+                <a href="index.html">Página inicial</a>
+                <a href="dados-usuario.html">Dados Pessoais</a>
+                <a class="tela-atual" href="historico-reservas.html">Histórico de reservas</a>
+                <a href="#">Sair</a>
+            </nav>
+        </aside>
+
+        <section class="historico">
+            <h1>Histórico</h1>
+            <p id="sub-titulo">Veja seu histórico de viagens</p>
+
+            <div class="lista-historico">
+
+                <!-- Card 1 -->
+                <div class="card-historico">
+                    <div class="info-historico">
+                        <h2>Paris, França</h2>
+                        <div class="grid-info">
+                            <p><strong>Destino</strong> Paris, França</p>
+                            <p><strong>Data da viagem</strong> 12 a 18 Set 2027</p>
+                            <p><strong>Valor pago</strong> R$ 7.500,00</p>
+                            <p><strong>Hotel</strong> Ritz Paris</p>
+                            <p><strong>Intérprete</strong> Joaquim Muniz</p>
+                        </div>
+                        <a href="#" class="detalhes">Mostrar detalhes</a>
+                    </div>
+                </div>
                 <div class="acoes-historico">
                     <button class="botao-tipo3 botao-gerar">Gerar Nota Fiscal</button>
                     <button class="botao-tipo3 botao-cancelar">Cancelar</button>
                 </div>
 
-            <div class="card-historico"id="card-historico2">
-
-                <div class="info-historico">
-                    <h2>Paris, França</h2>
-
-                    <div class="grid-info">
-                        <p><strong>Destino</strong> Paris, França</p>
-                        <p><strong>Data da viagem</strong> 12 a 18 Set 2027</p>
-                        <p><strong>Valor pago</strong> R$ 7.500,00</p>
-                        <p><strong>Hotel</strong> Ritz Paris</p>
-                        <p><strong>Intérprete</strong> Joaquim Muniz</p>
+                <!-- Card 2 -->
+                <div class="card-historico" id="card-historico2">
+                    <div class="info-historico">
+                        <h2>Paris, França</h2>
+                        <div class="grid-info">
+                            <p><strong>Destino</strong> Paris, França</p>
+                            <p><strong>Data da viagem</strong> 12 a 18 Set 2027</p>
+                            <p><strong>Valor pago</strong> R$ 7.500,00</p>
+                            <p><strong>Hotel</strong> Ritz Paris</p>
+                            <p><strong>Intérprete</strong> Joaquim Muniz</p>
+                        </div>
+                        <a href="#" class="detalhes">Mostrar detalhes</a>
                     </div>
-
-                    <a href="#" class="detalhes">Mostrar detalhes</a>
                 </div>
-
-            </div>
-
                 <div class="acoes-historico">
                     <button class="botao-tipo3 botao-gerar">Gerar Nota Fiscal</button>
                     <button class="botao-tipo3 botao-cancelar">Cancelar</button>
                 </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="home-footer">
+        <div class="home-container home-footer-wrapper">
+            <section>
+                <div class="home-footer-logo">
+                    <img src="" alt="Logo">
+                </div>
+                <p class="home-footer-text" style="margin-top: 1rem;">
+                    Turismo acessível e inclusivo para você viver o melhor do mundo com tranquilidade.
+                </p>
+            </section>
+
+            <nav>
+                <h4 class="home-footer-column-title">Navegação</h4>
+                <ul class="home-footer-list">
+                    <li class="home-footer-item"><a href="#">Início</a></li>
+                    <li class="home-footer-item"><a href="#">Pacotes</a></li>
+                    <li class="home-footer-item"><a href="#">Sobre nós</a></li>
+                    <li class="home-footer-item"><a href="#">Como funciona</a></li>
+                    <li class="home-footer-item"><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+
+            <section>
+                <h4 class="home-footer-column-title">Ajuda</h4>
+                <ul class="home-footer-list">
+                    <li class="home-footer-item">Perguntas frequentes</li>
+                    <li class="home-footer-item">Política de privacidade</li>
+                    <li class="home-footer-item">Termos de uso</li>
+                    <li class="home-footer-item">Cancelamentos</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4 class="home-footer-column-title">Contato</h4>
+                <ul class="home-footer-list">
+                    <li class="home-footer-item">contato@empresa.com</li>
+                    <li class="home-footer-item">(11) 99999-9999</li>
+                    <li class="home-footer-item">Instagram</li>
+                    <li class="home-footer-item">WhatsApp</li>
+                </ul>
+            </section>
         </div>
 
-    </section>
-
-</main>
+        <div class="home-footer-copyright">
+            © 2024 Nome da Empresa. Todos os direitos reservados.
+        </div>
+    </footer>
 
 </body>
+
 </html>
