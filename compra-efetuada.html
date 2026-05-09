@@ -7,6 +7,119 @@
     <title>Compra efetuada</title>
 </head>
 <body>
+
+    <header class="home-header">
+        <div class="home-container home-header-wrapper">
+            <button class="home-header-menu-toggle" id="tiMenuToggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="home-header-logo">
+                <img src="#" alt="Logo">
+            </div>
+
+            <a href="dados-usuario.html" class="home-header-login">
+                👤
+                <span>Entrar</span>
+            </a>
+
+            <nav class="home-header-navbar" id="tiHeaderNavbar">
+                <ul class="home-header-nav-list">
+                    <li><a href="index.html" class="home-header-nav-link">Início</a></li>
+                    <li><a href="#" class="home-header-nav-link">Catálogo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-dados">
+
+        <aside class="sidebar-dados-pessoais" id="tiSidebar">
+            <nav class="sidebar-dados">
+                <a href="javascript:history.back()" class="voltar">&lt; Voltar</a>
+            </nav>
+        </aside>
+
+        <section class="compra-de-pacote">
+
+                <div class="comprar-pacote">
+                    <div class="confirmacao-compra">
+                        <p id="confirmacao-visual">&#10004;</p>
+                        <h2>Compra concluída com sucesso!</h2>
+                        <p>Sua compra foi confirmada e será processada em breve</p>
+                    </div>
+                    
+                    <div class="info-compra">
+
+                        <div class="info-item">
+                            <div class="icon-box">📅</div>
+                            <div class="text-group">
+                                <strong>Data da compra</strong>
+                                <span>12/09/2027 - 10:30</span>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-box">🆔</div>
+                            <div class="text-group">
+                                <strong>ID do pedido</strong>
+                                <span>003</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="index.html" class="botao-home">IR PARA A PÁGINA INICIAL</a>
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="home-footer">
+        <div class="home-container home-footer-wrapper">
+            <section>
+                <div class="home-footer-logo">
+                    <img src="" alt="Logo">
+                </div>
+                <p class="home-footer-text" style="margin-top: 1rem;">
+                    Turismo acessível e inclusivo para você viver o melhor do mundo com tranquilidade.
+                </p>
+            </section>
+
+            <nav>
+                <h4 class="home-footer-column-title">Navegação</h4>
+                <ul class="home-footer-list">
+                    <li class="home-footer-item"><a href="#">Início</a></li>
+                    <li class="home-footer-item"><a href="#">Pacotes</a></li>
+                </ul>
+            </nav>
+
+            <section>
+                <h4 class="home-footer-column-title">Contato</h4>
+                <ul class="home-footer-list">
+                    <li class="home-footer-item">contato@empresa.com</li>
+                    <li class="home-footer-item">(11) 99999-9999</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="home-footer-copyright">
+            © 2024 Nome da Empresa. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        const tiMenuToggle = document.getElementById("tiMenuToggle");
+        const tiSidebar = document.getElementById("tiSidebar");
+
+        tiMenuToggle.addEventListener("click", () => {
+            tiSidebar.classList.toggle("home-navbar-active");
+        });
+    </script>
+
+</body>
+</html>
     
 </body>
 </html>
