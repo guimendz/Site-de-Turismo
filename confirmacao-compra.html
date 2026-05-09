@@ -96,14 +96,16 @@
         </div>
     </footer>
 
-    <script>
-        const tiMenuToggle = document.getElementById("tiMenuToggle");
-        const tiSidebar = document.getElementById("tiSidebar");
+<script>
 
-        tiMenuToggle.addEventListener("click", () => {
-            tiSidebar.classList.toggle("home-navbar-active");
-        });
-    </script>
+    const tiMenuToggle = document.getElementById("tiMenuToggle");
+    const tiHeaderNavbar = document.getElementById("tiHeaderNavbar");
+
+    tiMenuToggle.addEventListener("click", () => {
+    tiHeaderNavbar.classList.toggle("home-navbar-active");
+});
+
+</script>
 
 </body>
 </html>

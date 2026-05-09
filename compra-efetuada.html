@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="Assets/css/style.css">
     <title>Compra efetuada</title>
 </head>
@@ -46,7 +47,9 @@
 
                 <div class="comprar-pacote">
                     <div class="confirmacao-compra">
-                        <p id="confirmacao-visual">&#10004;</p>
+                        <div id="confirmacao-visual">
+                            <span class="material-symbols-outlined">check</span>
+                        </div>
                         <h2>Compra concluída com sucesso!</h2>
                         <p>Sua compra foi confirmada e será processada em breve</p>
                     </div>
@@ -54,7 +57,9 @@
                     <div class="info-compra">
 
                         <div class="info-item">
-                            <div class="icon-box">📅</div>
+                            <div class="icon-box">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                            </div>
                             <div class="text-group">
                                 <strong>Data da compra</strong>
                                 <span>12/09/2027 - 10:30</span>
@@ -62,7 +67,9 @@
                         </div>
 
                         <div class="info-item">
-                            <div class="icon-box">🆔</div>
+                            <div class="icon-box">
+                                <span class="material-symbols-outlined">badge</span>
+                            </div>
                             <div class="text-group">
                                 <strong>ID do pedido</strong>
                                 <span>003</span>
@@ -70,7 +77,7 @@
                         </div>
                     </div>
                     
-                    <a href="index.html" class="botao-home">IR PARA A PÁGINA INICIAL</a>
+                    <a href="index.html" class="botao-tipo4">IR PARA A PÁGINA INICIAL</a>
                 </div>
         </section>
 
@@ -110,12 +117,14 @@
     </footer>
 
     <script>
-        const tiMenuToggle = document.getElementById("tiMenuToggle");
-        const tiSidebar = document.getElementById("tiSidebar");
 
-        tiMenuToggle.addEventListener("click", () => {
-            tiSidebar.classList.toggle("home-navbar-active");
-        });
+    const tiMenuToggle = document.getElementById("tiMenuToggle");
+    const tiHeaderNavbar = document.getElementById("tiHeaderNavbar");
+
+    tiMenuToggle.addEventListener("click", () => {
+    tiHeaderNavbar.classList.toggle("home-navbar-active");
+});
+
     </script>
 
 </body>
