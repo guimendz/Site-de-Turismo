@@ -6,40 +6,64 @@
     <link rel="stylesheet" href="Assets/css/style.css">
     <title>Login</title>
 </head>
-<body class="cadastro-login">
+<body>
 
-    <main class="container-cadastro" id="tela-login">
-        <section class="lado-esquerdo">
-            <div class="logo-cadastro">
-                <img class="logo-tipo" src="Assets/img/Logo-tipo.jpg" alt="Logo">
-            </div>
+    <header class="home-header">
+    <div class="home-container home-header-wrapper">
 
-            <h2>Novo por aqui?</h2>
-            <p>Crie sua conta agora mesmo</p>
-            <a class="botao-tipo1" href="Cadastro.html">Cadastrar</a>
-        </section>
+        <button class="home-header-menu-toggle" id="tiMenuToggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <section class="lado-direito">
-            <h2 id="acesse-conta">Acesse sua conta</h2>
+        <div class="home-header-logo">
+            <img src="#" alt="Logo">
+        </div>
 
-            <form class="form-cadastro">
-                <div class="campo-form">
-                    <label class="rotulo-form" for="email">Email</label>
-                    <input id="email" name="email" type="email" placeholder="Email" required>
+        <a href="dados-usuario.html" class="home-header-login">
+            👤
+            <span>Entrar</span>
+        </a>
+
+        <nav class="home-header-navbar" id="tiHeaderNavbar">
+            <ul class="home-header-nav-list">
+                <li><a href="index.html" class="home-header-nav-link">Início</a></li>
+                <li><a href="#" class="home-header-nav-link">Catálogo</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <div class="cadastro-login">
+        <main class="container-cadastro" id="tela-login">
+            <section class="lado-esquerdo">
+                <div class="logo-cadastro">
+                    <img class="logo-tipo" src="Assets/img/Logo-tipo.jpg" alt="Logo">
                 </div>
-
-                <div class="campo-form">
-                    <label class="rotulo-form" for="senha">Senha</label>
-                    <input id="senha" name="senha" type="password" placeholder="Senha" required>
-                </div>
-
-                <a id="esqueci-senha" href="#">Esqueci a senha?</a>
-                
-                <button id="botao-entrar" class="botao-tipo1" type="submit">Entrar</button>
-            </form>
-            
-        </section>
-    </main>
+                <h2>Novo por aqui?</h2>
+                <p>Crie sua conta agora mesmo</p>
+                <a class="botao-tipo1" href="Cadastro.html">Cadastrar</a>
+            </section>
+            <section class="lado-direito">
+                <h2 id="acesse-conta">Acesse sua conta</h2>
+                <form class="form-cadastro">
+                    <div class="campo-form">
+                        <label class="rotulo-form" for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="Email" required>
+                    </div>
+                    <div class="campo-form">
+                        <label class="rotulo-form" for="senha">Senha</label>
+                        <input id="senha" name="senha" type="password" placeholder="Senha" required>
+                    </div>
+                    <a id="esqueci-senha" href="#">Esqueci a senha?</a>
+        
+                    <button id="botao-entrar" class="botao-tipo1" type="submit">Entrar</button>
+                </form>
+        
+            </section>
+        </main>
+    </div>
 
 </body>
 </html>

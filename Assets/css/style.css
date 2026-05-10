@@ -25,7 +25,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 85vh;
     padding: 20px;
 }
 
@@ -124,11 +124,6 @@ button {
 .botao-tipo1:hover {
     color: #ffffff;
     background-color: #333;
-}
-
-a {
-    text-decoration: none;
-    color: #000000;
 }
 
 /* Tela de login */
@@ -675,6 +670,12 @@ a {
   width: 100%;
   height: 180px;
   background-color: #dddddd;
+}
+
+.home-package-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .home-package-content{

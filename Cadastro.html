@@ -6,62 +6,83 @@
     <link rel="stylesheet" href="Assets/css/style.css">
     <title>Cadastro</title>
 </head>
-<body class="cadastro-login">
+<body>
+    
+    <header class="home-header">
+    <div class="home-container home-header-wrapper">
 
-    <main class="container-cadastro">
-        <section class="lado-esquerdo">
-            <div class="logo">
-                <img class="logo-tipo" src="Assets/img/Logo-tipo.jpg" alt="Logo">
-            </div>
-            
-            <h2>Bem vindo de volta</h2>
-            <p>Acesse sua conta agora mesmo</p>
-            <a id="botao-entrar" class="botao-tipo1" href="Login.html">Entrar</a>
-        </section>
+        <button class="home-header-menu-toggle" id="tiMenuToggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <section class="lado-direito">
-            <h2>Crie sua conta</h2>
-            
-            <form class="form-cadastro">
-                <div class="campo-form">
-                    <label class="rotulo-form" for="nome">Nome</label>
-                    <input id="nome" name="nome" type="text" placeholder="Nome" required>
+        <div class="home-header-logo">
+            <img src="#" alt="Logo">
+        </div>
+
+        <a href="dados-usuario.html" class="home-header-login">
+            👤
+            <span>Entrar</span>
+        </a>
+
+        <nav class="home-header-navbar" id="tiHeaderNavbar">
+            <ul class="home-header-nav-list">
+                <li><a href="index.html" class="home-header-nav-link">Início</a></li>
+                <li><a href="#" class="home-header-nav-link">Catálogo</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <div class="cadastro-login">
+        <main class="container-cadastro">
+            <section class="lado-esquerdo">
+                <div class="logo">
+                    <img class="logo-tipo" src="Assets/img/Logo-tipo.jpg" alt="Logo">
                 </div>
-
-                <div class="campo-form">
-                    <label class="rotulo-form" for="email">Email</label>
-                    <input id="email" name="email" type="email" placeholder="Email" required>
-                </div>
-
-                <div class="campo-form">
-                    <label class="rotulo-form" for="senha">Senha</label>
-                    <input id="senha" name="senha" type="password" placeholder="Senha" required>
-                </div>
-
-                <div class="campo-form">
-                    <label class="rotulo-form" for="cpf">CPF</label>
-                    <input id="cpf" name="cpf" type="text" placeholder="CPF" required>
-                </div>
-
-                <div class="campo-form">
-                    <label class="rotulo-form" for="nascimento">Data de Nascimento</label>
-                    <input id="nascimento" name="nascimento" type="date" placeholder="Data de Nascimento" required>
-                </div>
-
-                <div class="campo-form">
-                    <label class="rotulo-form" for="telefone">Telefone</label>
-                    <input id="telefone" name="telefone" type="tel" placeholder="Telefone" required>
-                </div>
-
-                 <div class="campo-form">
-                    <label class="rotulo-form" for="endereco">Endereço</label>
-                    <input id="endereco" name="endereco" type="text" placeholder="Endereço" required>
-                </div>
-
-                <button class="botao-tipo1" type="submit">Cadastrar</button>
-            </form>
-        </section>
-    </main>
+        
+                <h2>Bem vindo de volta</h2>
+                <p>Acesse sua conta agora mesmo</p>
+                <a id="botao-entrar" class="botao-tipo1" href="Login.html">Entrar</a>
+            </section>
+            <section class="lado-direito">
+                <h2>Crie sua conta</h2>
+        
+                <form class="form-cadastro">
+                    <div class="campo-form">
+                        <label class="rotulo-form" for="nome">Nome</label>
+                        <input id="nome" name="nome" type="text" placeholder="Nome" required>
+                    </div>
+                    <div class="campo-form">
+                        <label class="rotulo-form" for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="Email" required>
+                    </div>
+                    <div class="campo-form">
+                        <label class="rotulo-form" for="senha">Senha</label>
+                        <input id="senha" name="senha" type="password" placeholder="Senha" required>
+                    </div>
+                    <div class="campo-form">
+                        <label class="rotulo-form" for="cpf">CPF</label>
+                        <input id="cpf" name="cpf" type="text" placeholder="CPF" required>
+                    </div>
+                    <div class="campo-form">
+                        <label class="rotulo-form" for="nascimento">Data de Nascimento</label>
+                        <input id="nascimento" name="nascimento" type="date" placeholder="Data de Nascimento" required>
+                    </div>
+                    <div class="campo-form">
+                        <label class="rotulo-form" for="telefone">Telefone</label>
+                        <input id="telefone" name="telefone" type="tel" placeholder="Telefone" required>
+                    </div>
+                     <div class="campo-form">
+                        <label class="rotulo-form" for="endereco">Endereço</label>
+                        <input id="endereco" name="endereco" type="text" placeholder="Endereço" required>
+                    </div>
+                    <button class="botao-tipo1" type="submit">Cadastrar</button>
+                </form>
+            </section>
+        </main>
+    </div>
 
 </body>
 </html>
