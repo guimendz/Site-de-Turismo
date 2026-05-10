@@ -1326,20 +1326,21 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-
         margin-top: 20px;
         padding: 14px;
-
         background-color: #111;
         color: #fff;
         border-radius: 8px;
-
         font-weight: bold;
         transition: 0.3s;
     }
 
     .botao-tipo4:hover {
         background-color: #333;
+    }
+    
+    #img-container-detalhe {
+        width: 100%;
     }
 
 }
