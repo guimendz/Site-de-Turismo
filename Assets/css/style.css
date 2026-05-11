@@ -997,6 +997,21 @@ button {
     font-weight: bold;
 }
 
+.campo-dados {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+.campo-dados input, .campo-dados select {
+    width: 98%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
 /* Responsividade Web */
 
 @media (min-width: 768px) {
