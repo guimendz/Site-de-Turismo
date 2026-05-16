@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <title>Cadastro de passagens</title>
+</head>
+<body>
+
+    <header class="home-header">
+        <div class="home-container home-header-wrapper">
+            <button class="home-header-menu-toggle" id="tiMenuToggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="home-header-logo">
+                <img src="#" alt="Logo">
+            </div>
+
+            <a href="dados-usuario.html" class="home-header-login">
+                👤
+                <span>Entrar</span>
+            </a>
+
+            <nav class="home-header-navbar" id="tiHeaderNavbar">
+                <ul class="home-header-nav-list">
+                    <li><a href="index.html" class="home-header-nav-link">Início</a></li>
+                    <li><a href="#" class="home-header-nav-link">Catálogo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-revisao">
+
+    <aside class="sidebar-dados-pessoais" id="tiSidebar">
+        <nav class="sidebar-dados">
+            <a href="javascript:history.back()" class="voltar">&lt; Voltar</a>
+            <a href="">Catálogo de cadastro de intérprete</a>
+            <a href="">Catálogo de cadastro de reserva de hotel</a>
+            <a class="tela-atual" href="catalogo-passagem.html">Catálogo de cadastro de passagem</a>
+            <a href="catalogo-pacotes.html">Catálogo de cadastros de pacotes</a>
+            <a href="#">Sair</a>
+        </nav>
+    </aside>
+
+    <section class="conteudo-catalogo">
+        <div class="topo-catalogo">
+            <div class="titulos-catalogo">
+                <h1>Catálogo de Cadastros de Pacotes</h1>
+                <p>Gerencie os pacotes cadastrados no sistema.</p>
+            </div>
+        </div>
+
+        <div class="ferramentas-catalogo">
+            <div class="busca-wrapper">
+                <span class="material-symbols-outlined icone-busca">search</span>
+                <input type="text" placeholder="Buscar pacote por ID de passagem, reserva de hotel, intérprete ou destino...">
+            </div>
+            <button class="botao-novo">+ Novo</button>
+        </div>
+
+        <div class="tabela-responsiva">
+    
+        <div class="tabela-cabecalho-passagem">
+            <div class="col-id"><strong>ID</strong></div>
+            <div class="col-transporte"><strong>Transporte</strong></div>
+            <div class="col-tipo-passagem"><strong>Tipo passagem</strong></div>
+            <div class="col-precos"><strong>Preço</strong></div>
+            <div class="col-poltrona"><strong>Poltrona</strong></div>
+            <div class="col-placa-transporte"><strong>Placa transporte</strong></div>
+            <div class="col-hora-partida"><strong>Horário Partida</strong></div>
+            <div class="col-local-partida"><strong>Local partida</strong></div>
+            <div class="col-hora-chegada"><strong>Horário chegada</strong></div>
+            <div class="col-local-chegada"><strong>Local Chegada</strong></div>
+            <div class="col-acoes"><strong>Ações</strong></div>
+        </div>
+
+            <div class="tabela-linha-passagem">
+
+                <div class="bloco-grupo-card">
+                    <div class="celula col-id" data-label="ID">001</div>
+                    <div class="celula col-transporte" data-label="ID Transporte">Avião</div>
+                    <div class="celula col-tipo-passagem" data-label="ID Tipo passagem">Executiva</div>
+                    <div class="celula col-precos" data-label="ID Preços">R$ 1.350,00</div>
+                    <div class="celula col-poltrona" data-label="Poltrona">12A</div>
+                    <div class="celula col-placa-transporte" data-label="Placa transporte">PR-ABC1234</div>
+                    <div class="celula col-hora-partida" data-label="Hora partida"> 08:30</div>
+                    <div class="celula col-local-partida" data-label="Local partida"> Aeroporto de Guarulhos - SP</div>
+                    <div class="celula col-Hora-chegada" data-label="Hora chegada"> 10:45</div>
+                    <div class="celula col-local-chegada" data-label="Local chegada"> Aeroporto Santos Dumont - RJ</div>
+                    <div class="celula col-acoes">
+                        <a href="#" class="acao-editar">Editar</a>
+                        <a href="#" class="acao-excluir">Excluir</a>
+                    </div>
+            </div>
+
+    </section>
+
+    </main>
+
+    <footer class="home-footer">
+
+    <div class="home-container home-footer-wrapper">
+
+        <section>
+
+            <div class="home-footer-logo">
+                <img src="" alt="Logo">
+            </div>
+
+            <p class="home-footer-text" style="margin-top: 1rem;">
+                Turismo acessível e inclusivo para você viver o melhor do mundo
+                com tranquilidade.
+            </p>
+
+        </section>
+
+        <nav>
+
+            <h4 class="home-footer-column-title">
+                Navegação
+            </h4>
+
+            <ul class="home-footer-list">
+
+                <li class="home-footer-item">
+                    <a href="#">Início</a>
+                </li>
+
+                <li class="home-footer-item">
+                    <a href="#">Pacotes</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <section>
+
+            <h4 class="home-footer-column-title">
+                Contato
+            </h4>
+
+            <ul class="home-footer-list">
+
+                <li class="home-footer-item">
+                    contato@empresa.com
+                </li>
+
+                <li class="home-footer-item">
+                    (11) 99999-9999
+                </li>
+
+            </ul>
+
+        </section>
+
+    </div>
+
+    <div class="home-footer-copyright">
+        © 2024 Nome da Empresa. Todos os direitos reservados.
+    </div>
+
+</footer>
+
+<script>
+
+    const tiMenuToggle = document.getElementById("tiMenuToggle");
+    const tiHeaderNavbar = document.getElementById("tiHeaderNavbar");
+
+    tiMenuToggle.addEventListener("click", () => {
+    tiHeaderNavbar.classList.toggle("home-navbar-active");
+});
+
+</script>
+    
+</body>
+</html>

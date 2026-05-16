@@ -1027,8 +1027,8 @@ button {
 }
 
 .topo-catalogo p {
-    color: #666;
     font-size: 0.9rem;
+    margin-top: 10px;
     margin-bottom: 25px;
 }
 
@@ -1075,7 +1075,6 @@ button {
     font-size: 0.95rem;
 }
 
-/* Oculta o topo estilo planilha no mobile */
 .tabela-cabecalho {
     display: none;
 }
@@ -1086,7 +1085,6 @@ button {
     gap: 20px;
 }
 
-/* Estilo do Card Mobile */
 .tabela-linha {
     background: #fff;
     border: 1px solid #e5e5e5;
@@ -1098,7 +1096,6 @@ button {
     gap: 15px;
 }
 
-/* Classe única reutilizável em formato de coluna no mobile */
 .bloco-grupo-card {
     display: flex;
     flex-direction: column;
@@ -1113,7 +1110,6 @@ button {
     color: #000;
 }
 
-/* Rótulos pretos em cima do valor no card */
 .tabela-linha .celula::before {
     content: attr(data-label);
     font-size: 0.85rem;
@@ -1122,15 +1118,13 @@ button {
     margin-bottom: 3px;
 }
 
-/* Customizações do Card Mobile */
 .col-id {
     font-size: 1.1rem;
     font-weight: bold;
 }
 
-/* SOLUÇÃO PARA O PREÇO FICAR NO TOPO DIREITO DO CARD (Em cima de Destino) */
 .col-preco {
-    order: 1; /* Força o preço a subir no fluxo do bloco */
+    order: 1; 
     align-items: flex-end;
     text-align: right;
     font-size: 1.1rem;
@@ -1138,7 +1132,7 @@ button {
 }
 
 .col-destino {
-    order: 2; /* Fica abaixo do preço no mobile */
+    order: 2; 
 }
 
 .col-url {
@@ -1169,6 +1163,47 @@ button {
 }
 .acao-editar { color: #000; }
 .acao-excluir { color: #cc0000; }
+
+/* Tela de cadastro de pacotes */
+
+.cadastro-catalogo h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.cadastro-catalogo p {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.rotulo-catalogo {
+    margin-left: 5px;
+}
+
+.botoes-catalogo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.btn-catalogo-salvar {
+    background-color: #333;
+    color: white;
+}
+
+.btn-catalogo-salvar:hover {
+    background-color: #4de068;
+}
+
+/* Tela de cadastro de catálogo de passagens*/
+
+.tabela-cabecalho-passagem {
+    display: none;
+}
+
 
 /* Responsividade Web */
 
@@ -1535,7 +1570,6 @@ button {
         align-self: center;
     }
 
-    /* Definição exata de colunas combinando com o seu HTML arrumado */
     .tabela-cabecalho, .tabela-linha {
         display: grid !important;
         grid-template-columns: 0.5fr 1fr 1.2fr 1fr 1fr 1fr 2fr 1fr;
@@ -1544,7 +1578,6 @@ button {
     }
 
     .tabela-cabecalho {
-        
         padding: 15px 0;
         border-bottom: 2px solid #000;
         font-size: 0.9rem;
@@ -1588,5 +1621,19 @@ button {
         padding-top: 0;
     }
 
+    .tabela-cabecalho-passagem, .tabela-linha-passagem {
+        display: grid !important;
+        grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr 1fr 1.2fr 1fr;
+        gap: 10px;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .botoes-catalogo {
+        grid-column: 1 / -1;
+        flex-direction: row; 
+        justify-content: space-between;
+        width: 370px;
+    }
 }
 
