@@ -1012,6 +1012,164 @@ button {
     outline: none;
 }
 
+/* Tela catálogo de cadastro de pacotes */
+
+.conteudo-catalogo {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.topo-catalogo h1 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000;
+}
+
+.topo-catalogo p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.ferramentas-catalogo {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.busca-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.busca-wrapper input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.icone-busca {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.botao-novo {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.95rem;
+}
+
+/* Oculta o topo estilo planilha no mobile */
+.tabela-cabecalho {
+    display: none;
+}
+
+.tabela-linhas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo do Card Mobile */
+.tabela-linha {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Classe única reutilizável em formato de coluna no mobile */
+.bloco-grupo-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 50%;
+}
+
+.tabela-linha .celula {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+    color: #000;
+}
+
+/* Rótulos pretos em cima do valor no card */
+.tabela-linha .celula::before {
+    content: attr(data-label);
+    font-size: 0.85rem;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+/* Customizações do Card Mobile */
+.col-id {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* SOLUÇÃO PARA O PREÇO FICAR NO TOPO DIREITO DO CARD (Em cima de Destino) */
+.col-preco {
+    order: 1; /* Força o preço a subir no fluxo do bloco */
+    align-items: flex-end;
+    text-align: right;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.col-destino {
+    order: 2; /* Fica abaixo do preço no mobile */
+}
+
+.col-url {
+    order: 3;
+}
+.col-url a {
+    color: #0066cc;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.col-acoes {
+    order: 4;
+    flex-direction: row !important;
+    gap: 15px;
+    margin-top: auto;
+    padding-top: 10px;
+    justify-content: flex-end;
+}
+.col-acoes::before {
+    display: none !important;
+}
+
+.acao-editar, .acao-excluir {
+    font-size: 0.95rem;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.acao-editar { color: #000; }
+.acao-excluir { color: #cc0000; }
+
 /* Responsividade Web */
 
 @media (min-width: 768px) {
@@ -1062,10 +1220,9 @@ button {
     }
 
     .sidebar-dados-pessoais {
-        max-height: none; /* Sempre visível no desktop */
+        max-height: none;
         overflow: visible;
         margin-bottom: 40px;
-        /* Opcional: faz a sidebar acompanhar o scroll */
         position: sticky;
         top: 100px; 
     }
@@ -1354,9 +1511,81 @@ button {
     .botao-tipo4:hover {
         background-color: #333;
     }
+
+    #pg-inicial {
+        min-width: 300px;
+        width: 350px;
+    }
     
     #img-container-detalhe {
         width: 100%;
+    }
+
+    .ferramentas-catalogo {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .busca-wrapper {
+        max-width: 550px;
+    }
+    
+    .botao-novo {
+        align-self: center;
+    }
+
+    /* Definição exata de colunas combinando com o seu HTML arrumado */
+    .tabela-cabecalho, .tabela-linha {
+        display: grid !important;
+        grid-template-columns: 0.5fr 1fr 1.2fr 1fr 1fr 1fr 2fr 1fr;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .tabela-cabecalho {
+        
+        padding: 15px 0;
+        border-bottom: 2px solid #000;
+        font-size: 0.9rem;
+    }
+
+    .tabela-linha {
+        padding: 20px 0;
+        border: none;
+        border-bottom: 1px solid #e5e5e5;
+        border-radius: 0;
+    }
+
+    .bloco-grupo-card {
+        display: contents !important;
+    }
+
+    .tabela-linha .celula {
+        order: 0 !important;
+        font-size: 0.95rem;
+        font-weight: normal;
+        text-align:left ;
+        align-items: flex-start;
+    }
+
+    .tabela-linha .celula::before {
+        display: none !important;
+    }
+
+    .col-id, .col-preco {
+        font-size: 0.95rem !important;
+        font-weight: normal !important;
+    }
+
+    .tabela-cabecalho .col-preco {
+        text-align: center;
+    }
+
+    .col-acoes {
+        justify-content: flex-start;
+        margin-top: 0;
+        padding-top: 0;
     }
 
 }
