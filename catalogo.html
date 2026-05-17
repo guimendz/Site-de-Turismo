@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
     <link rel="stylesheet" href="Assets/css/style.css">
-    <title>Home - Turismo Inclusivo</title>
+    <title>Catálogo</title>
 </head>
-
-<body id="home-page">
-
+<body>
+    
     <header class="home-header">
         <div class="home-container home-header-wrapper">
             <button class="home-header-menu-toggle" id="tiMenuToggle" aria-label="Abrir menu">
@@ -36,68 +35,44 @@
         </div>
     </header>
 
-    <main>
-        <section class="home-hero-section">
-            <div class="home-container home-hero-wrapper">
-                <article class="home-hero-content">
-                    <h1 class="home-hero-title">
-                        Descubra experiências incríveis com interpretação inclusiva
-                    </h1>
-                    <p class="home-hero-description">
-                        Encontre pacotes completos de viagem com hotel, passagem e intérprete para sua tranquilidade e conforto.
-                    </p>
-                </article>
+    <main class="container-revisao">
 
-                <div class="home-hero-banner">
-                    <img src="" alt="Banner">
+        <aside class="sidebar-dados-pessoais" id="tiSidebar" aria-label="Menu lateral de catálogos">
+            <form class="sidebar-filtro">
+                <div class="filtro">
+                    <p>Filtros</p>
+                    <span class="material-symbols-outlined">filter_alt</span>
                 </div>
-            </div>
-        </section>
-
-        <section class="home-benefits-section">
-            <div class="home-container home-benefits-grid">
-                <article class="home-benefits-card">
-                    <div class="home-benefits-icon"><span class="material-symbols-outlined inline-icon">location_on</span></div>
-                    <div>
-                        <h3 class="home-benefits-card-title">Intérpretes Qualificados</h3>
-                        <p class="home-benefits-card-description">Profissionais experientes e certificados.</p>
-                    </div>
-                </article>
-
-                <article class="home-benefits-card">
-                    <div class="home-benefits-icon"><span class="material-symbols-outlined inline-icon">location_on</span></div>
-                    <div>
-                        <h3 class="home-benefits-card-title">Viagens Completas</h3>
-                        <p class="home-benefits-card-description">Hotel, passagem e intérprete em um só pacote.</p>
-                    </div>
-                </article>
-
-                <article class="home-benefits-card">
-                    <div class="home-benefits-icon"><span class="material-symbols-outlined inline-icon">location_on</span></div>
-                    <div>
-                        <h3 class="home-benefits-card-title">Atendimento Especializado</h3>
-                        <p class="home-benefits-card-description">Suporte dedicado antes, durante e após a viagem.</p>
-                    </div>
-                </article>
-
-                <article class="home-benefits-card">
-                    <div class="home-benefits-icon"><span class="material-symbols-outlined inline-icon">location_on</span></div>
-                    <div>
-                        <h3 class="home-benefits-card-title">Segurança e Conforto</h3>
-                        <p class="home-benefits-card-description">Sua tranquilidade em cada detalhe da viagem.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="home-packages-section">
-            <div class="home-container">
-                <div class="home-packages-header">
-                    <h2 class="home-packages-title">Pacotes em destaque</h2>
-                    <a href="#" class="home-packages-link">Ver todos</a>
+                <label for="destino">Destino</label>
+                <input type="text" id="input-destino" list="destinos" placeholder="Selecione seu destino">
+                <datalist id="destinos">
+                    <option value="Rio de Janeiro - RJ">
+                    <option value="São Paulo - SP">
+                    <option value="Foz do Iguaçu - PR">
+                    <option value="Salvador - BA">
+                </datalist>
+                <div class="input-datas">
+                    <label id="filtro-data" for="datas">Datas</label>
+                    <input id="data-ida" name="data-ida" type="date">
+                    <label for="datas"></label>
+                    <input id="data-ida" name="data-volta" type="date">
                 </div>
 
-                <div class="home-packages-grid">
+            </form>
+        </aside>
+
+        <section class="catalogo">
+            <h1>Todos os pacotes</h1>
+            <p>Encontre o pacote ideal para a sua próxima viagem</p>
+
+            <div class="ferramentas-catalogo">
+                <form class="busca-wrapper" id="form-busca" role="search">
+                    <span class="material-symbols-outlined icone-busca" aria-hidden="true">search</span>
+                    <input type="text" placeholder="Buscar pacotes, destinos, hotéis...">
+                </form>
+            </div>
+
+            <div class="home-packages-grid">
                     <article class="home-package-card">
                         <div class="home-package-image"><img src="" alt="Imagem"></div>
                         <div class="home-package-content">
@@ -134,50 +109,85 @@
                         </div>
                     </article>
                 </div>
-            </div>
+                
         </section>
+
     </main>
 
     <footer class="home-footer">
+
         <div class="home-container home-footer-wrapper">
+
             <section>
+
                 <div class="home-footer-logo">
                     <img src="" alt="Logo">
                 </div>
+
                 <p class="home-footer-text" style="margin-top: 1rem;">
-                    Turismo acessível e inclusivo para você viver o melhor do mundo com tranquilidade.
+                    Turismo acessível e inclusivo para você viver o melhor do mundo
+                    com tranquilidade.
                 </p>
+
             </section>
 
             <nav>
-                <h4 class="home-footer-column-title">Navegação</h4>
+
+                <h4 class="home-footer-column-title">
+                    Navegação
+                </h4>
+
                 <ul class="home-footer-list">
-                    <li class="home-footer-item"><a href="#">Início</a></li>
-                    <li class="home-footer-item"><a href="#">Pacotes</a></li>
+
+                    <li class="home-footer-item">
+                        <a href="#">Início</a>
+                    </li>
+
+                    <li class="home-footer-item">
+                        <a href="#">Pacotes</a>
+                    </li>
+
                 </ul>
+
             </nav>
 
             <section>
-                <h4 class="home-footer-column-title">Contato</h4>
+
+                <h4 class="home-footer-column-title">
+                    Contato
+                </h4>
+
                 <ul class="home-footer-list">
-                    <li class="home-footer-item">contato@empresa.com</li>
-                    <li class="home-footer-item">(11) 99999-9999</li>
+
+                    <li class="home-footer-item">
+                        contato@empresa.com
+                    </li>
+
+                    <li class="home-footer-item">
+                        (11) 99999-9999
+                    </li>
+
                 </ul>
+
             </section>
+
         </div>
 
         <div class="home-footer-copyright">
             © 2024 Nome da Empresa. Todos os direitos reservados.
         </div>
+
     </footer>
 
     <script>
+
         const tiMenuToggle = document.getElementById("tiMenuToggle");
-        const tiNavbar = document.getElementById("tiNavbar");
+        const tiHeaderNavbar = document.getElementById("tiHeaderNavbar");
 
         tiMenuToggle.addEventListener("click", () => {
-            tiNavbar.classList.toggle("home-navbar-active");
-        });
+        tiHeaderNavbar.classList.toggle("home-navbar-active");
+    });
+
     </script>
 
 </body>
