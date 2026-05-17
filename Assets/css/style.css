@@ -1675,7 +1675,7 @@ button {
         margin-bottom: 25px;
     }
 
-    #campo-extenso {
+    .campo-extenso {
         grid-column: 1 / -1;
     }
 }

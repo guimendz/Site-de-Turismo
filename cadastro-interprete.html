@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/css/style.css">
-    <title>Cadastro de passagem</title>
+    <title>Cadastro de intérprete</title>
 </head>
 <body>
     
@@ -36,57 +36,45 @@
 
     <main class="container-revisao">
 
-        <aside class="sidebar-dados-pessoais" id="tiSidebar">
+    <aside class="sidebar-dados-pessoais" id="tiSidebar">
         <nav class="sidebar-dados">
             <a href="javascript:history.back()" class="voltar">&lt; Voltar</a>
-            <a href="cadastro-interprete.html">Cadastro de intérprete</a>
+            <a class="tela-atual" href="cadastro-interprete.html">Cadastro de intérprete</a>
             <a href="cadastro-hotel.html">Cadastro de reserva de hotel</a>
-            <a class="tela-atual" href="cadastro.passagem.html">Cadastro de passagem</a>
+            <a href="cadastro.passagem.html">Cadastro de passagem</a>
             <a href="cadastro-pacote.html">Cadastros de pacotes</a>
             <a href="#">Sair</a>
         </nav>
     </aside>
 
     <section class="cadastro-catalogo">
-        <h1>Cadastro de passagem</h1>
-        <p>Preencha os dados abaixo para cadastrar uma nova passagem</p>
+        <h1>Cadastro de pacotes</h1>
+        <p>Preencha os dados abaixo para cadastrar um novo pacote</p>
 
         <form class="form-dados">
             <div class="campo-dados">
-                <label class="rotulo-catalogo" for="Transporte">Transporte</label>
-                <input id="transporte" name="transporte" type="text" placeholder="Digite o tipo de transporte" required>
+                <label class="rotulo-catalogo" for="ID Nome">Nome</label>
+                <input id="id nome" name="id nome" type="text" placeholder="Digite o nome completo" required>
+            </div>
+             <div class="campo-dados">
+                <label class="rotulo-catalogo" for="Data-nascimento">Data de nascimento</label>
+                <input id="data-nascimento" name="data-nascimento" type="date" required>
             </div>
             <div class="campo-dados">
-                <label class="rotulo-catalogo" for="Tipo de passagem">Tipo de passagem</label>
-                <input id="tipo-passagem" name="tipo-passagem" type="text" placeholder="Ex: Convencional, Executiava, Semi leito" required>
+                <label class="rotulo-catalogo" for="Telefone">Telefone</label>
+                <input id="telefone" name=telefone" type="tel" placeholder="(00) 00000-0000" required>
             </div>
             <div class="campo-dados">
-                <label class="rotulo-catalogo" for="Preço">Preço</label>
-                <input id="id preco" name="id preco" type="text" placeholder="R$ 0,00" required>
+                <label class="rotulo-catalogo" for="CPF">CPF</label>
+                <input id="cpf" name="cpf" type="number" placeholder="000.000.000-00" required>
             </div>
             <div class="campo-dados">
-                <label class="rotulo-catalogo" for="Poltrona">Poltrona</label>
-                <input id="poltrona" name="poltrona" type="text" placeholder="Digite a poltrona" required>
+                <label class="rotulo-catalogo" for="Email">Email</label>
+                <input id="email" type="text" placeholder="exemplo@email.com" required>
             </div>
             <div class="campo-dados">
-                <label class="rotulo-catalogo" for="Placa-transporte">Placa de transporte</label>
-                <input id="placa-transporte" name="placa-transporte" type="text" placeholder="Digite a placa de transporte" required>
-            </div>
-            <div class="campo-dados">
-                <label class="rotulo-catalogo" for="Horario partida">Horário partida</label>
-                <input id="horario-partida" name="horario-partida" type="time" placeholder="00:00" required>
-            </div>
-            <div class="campo-dados">
-                <label class="rotulo-catalogo" for="Local-partida">Local partida</label>
-                <input id="local-partida" name="local-partida" type="adress" placeholder="Digite o local de partida" required>
-            </div>
-            <div class="campo-dados">
-                <label class="rotulo-catalogo" for="Horario chegada">Horário chegada</label>
-                <input id="horario-chegada" name="horario-chegada" type="time" placeholder="00:00" required>
-            </div>
-            <div class="campo-dados campo-extenso">
-                <label class="rotulo-catalogo" for="Local-chegada">Local chegada</label>
-                <input id="local-chegada" name="local-chegada" type="adress" placeholder="Digite o local de chegada" required>
+                <label class="rotulo-catalogo" for="Preço Diária">Preço diária</label>
+                <input id="id preco-diaria" name="id prec-diaria" type="text" placeholder="R$ 0,00" required>
             </div>
             <div class="botoes-catalogo">
                 <button class="botao-tipo3 botao-cancelar" type="submit">Cancelar</button>
