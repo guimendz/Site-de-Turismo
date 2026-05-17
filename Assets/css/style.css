@@ -1616,9 +1616,9 @@ button {
         padding-top: 0;
     }
 
-        .col-acoes .acao-link {
-            text-align: center;
-        }
+    .col-acoes .acao-link {
+        text-align: center;
+    }
 
     .botoes-catalogo {
         grid-column: 1 / -1;
@@ -1673,5 +1673,9 @@ button {
 
     .catalogo p {
         margin-bottom: 25px;
+    }
+
+    #campo-extenso {
+        grid-column: 1 / -1;
     }
 }

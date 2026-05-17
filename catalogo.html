@@ -180,15 +180,13 @@
     </footer>
 
     <script>
+    const tiMenuToggle = document.getElementById("tiMenuToggle");
+    const tiNavbar = document.getElementById("tiNavbar");
 
-        const tiMenuToggle = document.getElementById("tiMenuToggle");
-        const tiHeaderNavbar = document.getElementById("tiHeaderNavbar");
-
-        tiMenuToggle.addEventListener("click", () => {
-        tiHeaderNavbar.classList.toggle("home-navbar-active");
+    tiMenuToggle.addEventListener("click", () => {
+        tiNavbar.classList.toggle("home-navbar-active");
     });
-
-    </script>
+</script>
 
 </body>
 </html>
