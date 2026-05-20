@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
     <link rel="stylesheet" href="Assets/css/style.css">
     <title>Histórico de reservas</title>
 </head>
@@ -23,7 +24,7 @@
             </div>
 
             <a href="dados-usuario.html" class="home-header-login">
-                👤
+                <span class="material-symbols-outlined">account_circle</span>
                 <span>Entrar</span>
             </a>
 
@@ -54,7 +55,6 @@
 
             <div class="lista-historico">
 
-                <!-- Card 1 -->
                 <div class="card-historico">
                     <div class="info-historico">
                         <h2>Paris, França</h2>
@@ -73,7 +73,6 @@
                     <button class="botao-tipo3 botao-cancelar">Cancelar</button>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="card-historico" id="card-historico2">
                     <div class="info-historico">
                         <h2>Paris, França</h2>
@@ -130,14 +129,10 @@
     </footer>
 
      <script>
-    // Seleciona o botão hambúrguer pelo ID
     const tiMenuToggle = document.getElementById("tiMenuToggle");
-    // Seleciona a Sidebar (que agora tem o ID tiNavbar)
     const tiNavbar = document.getElementById("tiNavbar");
 
-    // Adiciona o evento de clique
     tiMenuToggle.addEventListener("click", () => {
-        // Liga/Desliga a classe que define a altura máxima (max-height)
         tiNavbar.classList.toggle("home-navbar-active");
     });
 </script>

@@ -144,7 +144,8 @@ button {
     }
 
 #tela-login {
-    height: 90vh;
+    min-height: 90vh;
+    height: 100%;
 }
 
 #acesse-conta {
@@ -187,7 +188,7 @@ button {
 
     .sidebar-dados a {
         text-decoration: none;
-        color: #333;
+        color: #1B3B88;
         font-weight: bold;
         cursor: pointer;
         border-radius: 5px;
@@ -197,12 +198,12 @@ button {
     }
 
         .sidebar-dados a:hover {
-            background-color: rgb(167, 164, 164);
+            background-color: #bfd7fb;
             transition: all 0.5s ease;
         }
 
 .tela-atual {
-    background-color: rgb(222, 217, 217);
+    background-color: #E6EDFD;
 }
 
     .tela-atual:hover {
@@ -255,7 +256,6 @@ button {
 }
 
 .botao-tipo2 {
-    background: none;
     border: 2px solid #000000;
     padding: 10px 20px;
     border-radius: 12px;
@@ -270,6 +270,17 @@ button {
         background-color: #333;
         color: #ffffff;
     }
+
+.btn-azul {
+    background-color: #5985DC;
+    color: #ffffff;
+    border-color: #1B3B88;
+}
+
+.btn-azul:hover {
+    background-color: #1B3B88;
+    border-color: #5985DC;
+}
 
 #botao-excluir {
     border-color: #ff0000;
@@ -388,8 +399,8 @@ button {
 }
 
 .botao-gerar {
-    background-color: #0b8d34;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #0b8d34;
 }
 
     .botao-gerar:hover {
@@ -399,8 +410,9 @@ button {
     }
 
 .botao-cancelar {
-    background-color: #bd0a0a;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #bd0a0a;
+    text-align: center;
 }
 
     .botao-cancelar:hover {
@@ -452,6 +464,12 @@ button {
 
 /* Tela Home page */
 
+.home-benefits-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .home-container {
     width: 90%;
     max-width: 1200px;
@@ -459,6 +477,7 @@ button {
 }
 
 .home-header {
+    color: #1B3B88;
     width: 100%;
     height: 80px;
     background-color: #ffffff;
@@ -704,6 +723,7 @@ button {
 
 .home-footer {
     background-color: #f7f7f7;
+    color: #1B3B88;
     border-top: 1px solid #e5e5e5;
     padding-top: 3rem;
 }
@@ -712,11 +732,11 @@ button {
     width: 250px;
 }
 
-.home-footer-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    .home-footer-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
 .home-footer-wrapper {
     display: grid;
@@ -737,7 +757,6 @@ button {
 
 .home-footer-text,
 .home-footer-item {
-    color: #666666;
     line-height: 1.6;
 }
 
@@ -764,10 +783,11 @@ button {
 }
 
 .home-footer-copyright {
+    background-color: #1B3B88;
+    color: #ffffff;
     border-top: 1px solid #dddddd;
     text-align: center;
     padding: 1rem 0;
-    color: #666666;
     font-size: 0.9rem;
 }
 
@@ -789,7 +809,8 @@ button {
     border-color: #b8b5b5d1;
     padding: 15px;
     border-radius: 15px;
-    height: 70vh;
+    height: 100%;
+    min-height: 70vh;
 }
 
 .conteudo-compra h2 {
@@ -797,26 +818,31 @@ button {
     margin-bottom: 20px;
 }
 
-.conteudo-compra p {
-    margin-bottom: 150px;
-}
-
 #qr-code-compra {
-    margin-bottom: 130px;
-}
-
-.conteudo-compra {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    height: 100%;
-    text-align: center;
+    justify-content: center;
 }
 
-.conteudo-compra form button {
-    background-color: transparent;
-}
+    #qr-code-compra img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+
+    .conteudo-compra {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+    }
+
+    .conteudo-compra form button {
+        background-color: transparent;
+    }
 
 
 /* Tela de compra efetuada */
@@ -866,10 +892,10 @@ button {
     font-size: 14px;
 }
 
-    .text-group strong {
-        color: #333;
-        font-size: 13px;
-    }
+.text-group strong {
+    color: #333;
+    font-size: 13px;
+}
 
 .botao-tipo4 {
     display: flex;
@@ -878,19 +904,23 @@ button {
     width: 100%;
     max-width: 400px;
     margin: 20px auto 0;
-    background-color: #111;
-    color: #fff;
     text-align: center;
     text-decoration: none;
     padding: 15px;
+    background-color: #5985DC;
+    color: #ffffff;
+    border: 2px solid #1B3B88;
     border-radius: 10px;
     font-weight: bold;
     font-size: 14px;
     transition: background 0.3s;
+    
 }
+
     .botao-tipo4:hover {
         color: white;
-        background-color: #333;
+        background-color: #1B3B88;
+        border-color: #5985DC;
         transition: all 0.5s ease;
     }
 
@@ -1024,11 +1054,13 @@ button {
     border-radius: 14px;
     padding: 20px;
 }
+
 .campo-base {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
+
 .input-base {
     width: 100%;
     padding: 12px;
@@ -1036,6 +1068,7 @@ button {
     border-radius: 8px;
     outline: none;
 }
+
 .acao-link {
     font-size: 0.95rem;
     text-decoration: underline;
@@ -1050,6 +1083,7 @@ button {
     border: 1px solid #e5e5e5;
     border-radius: 14px;
     padding: 20px;
+    margin: 10px 0;
 }
 
 .tabela-campo {
@@ -1058,9 +1092,9 @@ button {
     gap: 5px;
 }
 
-.tabela-campo a {
-    word-break: break-word;
-}
+    .tabela-campo a {
+        word-break: break-word;
+    }
 
     .tabela-campo::before {
         content: attr(data-label);
@@ -1153,20 +1187,20 @@ button {
     margin-bottom: 5px;
 }
 
-.tabela-linha .celula {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.95rem;
-    color: #000;
-}
+    .tabela-linha .celula {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.95rem;
+        color: #000;
+    }
 
-.tabela-linha .celula::before {
-    content: attr(data-label);
-    font-size: 0.85rem;
-    color: #000;
-    font-weight: bold;
-    margin-bottom: 3px;
-}
+        .tabela-linha .celula::before {
+            content: attr(data-label);
+            font-size: 0.85rem;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
 
 .tabela-campo,
 .tabela-cabecalho div {
@@ -1189,9 +1223,9 @@ button {
     padding-top: 10px;
 }
 
-.col-acoes .acao-link {
-    text-align: left;
-}
+    .col-acoes .acao-link {
+        text-align: left;
+    }
 
 .acao-editar, .acao-excluir {
     font-size: 0.95rem;
@@ -1205,6 +1239,7 @@ button {
 
 .acao-excluir {
     color: #cc0000;
+    background-color: white;
 }
 
 /* Tela de cadastro de pacotes */
@@ -1237,22 +1272,26 @@ button {
     color: white;
 }
 
-.btn-catalogo-salvar:hover {
-    background-color: #4de068;
-}
+    .btn-catalogo-salvar:hover {
+        background-color: #4de068;
+    }
 
 /* tela de catálogo */
-    
+
 .sidebar-filtro {
     display: none;
 }
 
 .catalogo h1 {
-        margin-bottom: 15px;
-    }
+    margin-bottom: 15px;
+}
 
 .catalogo p {
     margin-bottom: 25px;
+}
+
+.catalogo .home-package-info{
+    margin-bottom: 0.5rem;
 }
 
 /* Responsividade Web */
@@ -1283,7 +1322,8 @@ button {
     }
 
     #tela-login {
-        height: 70vh;
+        min-height: 70vh;
+        height: 100%;
     }
 
     .logo-tela-dados {
@@ -1569,13 +1609,14 @@ button {
 
     .tabela-card {
         display: grid;
-        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 2fr 0.8fr;
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 16px;
         align-items: center;
         border: 1px solid #e5e5e5;
         border-radius: 14px;
         padding: 20px;
     }
+
     .tabela-campo::before {
         display: none;
     }
@@ -1586,27 +1627,24 @@ button {
         align-items: center;
     }
 
-    .busca-wrapper {
-        max-width: 550px;
-    }
-
     .botao-novo {
         align-self: center;
     }
 
     .tabela-cabecalho, .tabela-linha {
-        display: grid !important;
-        grid-template-columns: 0.5fr 1fr 1.2fr 1fr 1fr 1fr 2fr 1fr;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         align-items: center;
     }
 
     .tabela-cabecalho {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 2fr 0.8fr;
         gap: 16px;
         padding: 0 10px 14px;
         border-bottom: 2px solid #000;
+    }
+
+    .tabela-linha {
+        gap: 10px;
     }
 
     .col-acoes {
@@ -1616,9 +1654,9 @@ button {
         padding-top: 0;
     }
 
-    .col-acoes .acao-link {
-        text-align: center;
-    }
+        .col-acoes .acao-link {
+            text-align: center;
+        }
 
     .botoes-catalogo {
         grid-column: 1 / -1;
@@ -1626,7 +1664,7 @@ button {
         justify-content: space-between;
         width: 370px;
     }
-    
+
     .sidebar-filtro {
         display: flex;
         flex-direction: column;
@@ -1646,7 +1684,6 @@ button {
         flex-direction: row;
         gap: 10px;
         font-weight: bold;
-        align-items: center;
         margin-bottom: 10px;
     }
 
@@ -1659,13 +1696,14 @@ button {
         flex-direction: column;
         gap: 5px;
     }
-    
-    .input-datas input {
-         width: 200px;
-        height: 25px;
-        border-radius: 3px;
-        border-color: #9393939e;
-    }
+
+        .input-datas input {
+            width: 200px;
+            height: 25px;
+            border-radius: 3px;
+            border-color: #9393939e;
+            margin-bottom: 10px;
+        }
 
     .catalogo h1 {
         margin-bottom: 15px;
@@ -1677,5 +1715,9 @@ button {
 
     .campo-extenso {
         grid-column: 1 / -1;
+    }
+
+    .coluna-2 {
+        grid-column: span 2;
     }
 }

@@ -46,7 +46,7 @@
             </a>
 
             <a asp-controller="Admin" href="catalogo-interprete.html"
-               asp-action="ListaInterprete">
+               asp-action="ListaInterprete" class="tela-atual">
                 Catálogo de cadastro de intérprete
             </a>
 
@@ -60,8 +60,9 @@
                 Catálogo de cadastro de passagem
             </a>
 
-            <a asp-controller="Admin" href="catalogo-pacotes.html"
-               asp-action="ListaPacotes" class="tela-atual">
+            <a
+               asp-controller="Admin" href="catalogo-pacotes.html"
+               asp-action="ListaPacotes">
 
                 Catálogo de cadastros de pacotes
 
@@ -84,10 +85,10 @@
 
             <div class="titulos-catalogo">
 
-                <h1>Catálogo de Cadastros de Pacotes</h1>
+                <h1>Catálogo de Cadastros de Intérpretes</h1>
 
                 <p>
-                    Gerencie os pacotes cadastrados no sistema.
+                    Gerencie os intérpretes cadastrados no sistema.
                 </p>
 
             </div>
@@ -105,14 +106,14 @@
                 <input type="text"
                        class="input-base"
                        id="input-busca"
-                       placeholder="Buscar pacote por ID de passagem, reserva de hotel, intérprete ou destino...">
+                       placeholder="Buscar intérprete por ID, nome, CPF, e-mail, telefone...">
 
             </div>
 
             <a asp-controller="Admin"
-               asp-action="CadastroPacotes">
+               asp-action="CadastroInterprete">
 
-                <a href="cadastro-pacote.html">
+                <a href="cadastro-interprete.html">
                     <button class="botao-novo">
                         + Novo
                     </button>
@@ -131,27 +132,27 @@
                 </div>
 
                 <div>
-                    <strong>ID Passagem</strong>
+                    <strong>Nome</strong>
                 </div>
 
                 <div>
-                    <strong>ID reserva hotel</strong>
+                    <strong>Data nascimento</strong>
                 </div>
 
                 <div>
-                    <strong>ID Intérprete</strong>
+                    <strong>Telefone</strong>
                 </div>
 
                 <div>
-                    <strong>Preço</strong>
+                    <strong>CPF</strong>
                 </div>
 
                 <div>
-                    <strong>Destino</strong>
+                    <strong>E-mail</strong>
                 </div>
 
                 <div>
-                    <strong>URL da imagem</strong>
+                    <strong>Diária</strong>
                 </div>
 
                 <div class="col-acoes">
@@ -165,90 +166,83 @@
                 <div class="card-base">
 
                     <p>
-                        Nenhum pacote cadastrado.
+                        Nenhum intérprete cadastrado.
                     </p>
 
                 </div>
             }
             else
             {
-                @foreach (var pacote in Model)
+                @foreach (var interprete in Model)
                 {
-                    <div class="tabela-card card-base card-pacotes">
+                    <div class="tabela-card card-base card-interprete">
 
                         <div class="tabela-campo campo-base"
                              data-label="ID">
 
-                            @pacote.PacoteId
+                            @interprete.InterpreteId
 
                         </div>
 
                         <div class="tabela-campo campo-base"
-                             data-label="ID Passagem">
+                             data-label="Nome">
 
-                            @pacote.PassagemId
-
-                        </div>
-
-                        <div class="tabela-campo campo-base"
-                             data-label="ID reserva hotel">
-
-                            @pacote.ReservaHotelId
+                            @interprete.NomeInterprete
 
                         </div>
 
                         <div class="tabela-campo campo-base"
-                             data-label="ID Intérprete">
+                             data-label="Data de nascimento">
 
-                            @pacote.InterpreteId
-
-                        </div>
-
-                        <div class="tabela-campo campo-base"
-                             data-label="Preço">
-
-                            R$ @pacote.Preco.ToString("N2")
+                            @interprete.DtNascimento.ToString("dd/MM/yyyy")
 
                         </div>
 
                         <div class="tabela-campo campo-base"
-                             data-label="Destino">
+                             data-label="Telefone">
 
-                            @pacote.Destino
+                            @interprete.Telefone
 
                         </div>
 
-                        <div class="tabela-campo campo-base col-url"
-                             data-label="URL da imagem">
+                        <div class="tabela-campo campo-base"
+                             data-label="CPF">
 
-                            <a href="@pacote.UrlImagem"
-                               target="_blank">
+                            @interprete.Cpf
 
-                                @(pacote.UrlImagem.Length >= 15
-                                    ? pacote.UrlImagem.Substring(0, 15) + "..."
-                                    : pacote.UrlImagem.ToUpper())
+                        </div>
 
-                            </a>
+                        <div class="tabela-campo campo-base"
+                             data-label="E-mail">
+
+                            @interprete.Email
+
+                        </div>
+
+                        <div class="tabela-campo campo-base"
+                             data-label="Diária">
+
+                                R$ @interprete.PrecoDiaria.ToString("N2")
 
                         </div>
 
                         <div class="tabela-campo col-acoes">
 
                             <a asp-controller="Admin"
-                               asp-action="EditarPacote"
-                               asp-route-id="@pacote.PacoteId"
+                               asp-action="EditarInterprete"
+                               asp-route-id="@interprete.InterpreteId"
                                class="acao-link acao-editar">
 
                                 Editar
 
                             </a>
 
-                            <form asp-action="ExcluirPacote"
+                            <form asp-action="ExcluirInterprete"
                                   asp-controller="Admin"
                                   method="post"
                                   onsubmit="return confirmarExclusao();">
 
-                                <input type="hidden" name="id" value="@pacote.PacoteId" />
+                                <input type="hidden" name="id" value="@interprete.InterpreteId" />
 
                                 <button type="submit"
                                         class="acao-link acao-excluir">
@@ -348,7 +342,7 @@
         document.getElementById("input-busca");
 
     const cards =
-        document.querySelectorAll(".card-pacotes");
+        document.querySelectorAll(".card-interprete");
 
     inputBusca.addEventListener("input", function () {
 

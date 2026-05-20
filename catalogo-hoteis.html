@@ -51,7 +51,7 @@
             </a>
 
             <a asp-controller="Admin" href="catalogo-hoteis.html"
-               asp-action="ListaHoteis">
+               asp-action="ListaHoteis" class="tela-atual">
                 Catálogo de cadastro de reserva de hotel
             </a>
 
@@ -60,8 +60,9 @@
                 Catálogo de cadastro de passagem
             </a>
 
-            <a asp-controller="Admin" href="catalogo-pacotes.html"
-               asp-action="ListaPacotes" class="tela-atual">
+            <a
+               asp-controller="Admin" href="catalogo-pacotes.html"
+               asp-action="ListaPacotes">
 
                 Catálogo de cadastros de pacotes
 
@@ -80,14 +81,28 @@
 
     <section class="conteudo-catalogo">
 
+        @if (TempData["MensagemErro"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["MensagemErro"]
+            </div>
+        }
+
+        @if (TempData["MensagemSucesso"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["MensagemSucesso"]
+            </div>
+        }
+
         <div class="topo-catalogo">
 
             <div class="titulos-catalogo">
 
-                <h1>Catálogo de Cadastros de Pacotes</h1>
+                <h1>Catálogo de Cadastros de Reserva de Hotel</h1>
 
                 <p>
-                    Gerencie os pacotes cadastrados no sistema.
+                    Gerencie as reservas de hotel cadastradas no sistema.
                 </p>
 
             </div>
@@ -105,14 +120,14 @@
                 <input type="text"
                        class="input-base"
                        id="input-busca"
-                       placeholder="Buscar pacote por ID de passagem, reserva de hotel, intérprete ou destino...">
+                       placeholder="Buscar reserva por ID, hotel...">
 
             </div>
 
             <a asp-controller="Admin"
-               asp-action="CadastroPacotes">
+               asp-action="CadastroHoteis">
 
-                <a href="cadastro-pacote.html">
+                <a href="cadastro-hotel.html">
                     <button class="botao-novo">
                         + Novo
                     </button>
@@ -131,27 +146,25 @@
                 </div>
 
                 <div>
-                    <strong>ID Passagem</strong>
+                    <strong>Hotel</strong>
                 </div>
 
                 <div>
-                    <strong>ID reserva hotel</strong>
+                    <strong>Endereço</strong>
+                </div>
+
+                <div></div>
+
+                <div>
+                    <strong>Check-in</strong>
                 </div>
 
                 <div>
-                    <strong>ID Intérprete</strong>
+                    <strong>Check-out</strong>
                 </div>
 
                 <div>
-                    <strong>Preço</strong>
-                </div>
-
-                <div>
-                    <strong>Destino</strong>
-                </div>
-
-                <div>
-                    <strong>URL da imagem</strong>
+                    <strong>Preço total</strong>
                 </div>
 
                 <div class="col-acoes">
@@ -165,90 +178,77 @@
                 <div class="card-base">
 
                     <p>
-                        Nenhum pacote cadastrado.
+                        Nenhuma reserva de hotel cadastrada.
                     </p>
 
                 </div>
             }
             else
             {
-                @foreach (var pacote in Model)
+                @foreach (var reservaHotel in Model)
                 {
-                    <div class="tabela-card card-base card-pacotes">
+                    <div class="tabela-card card-base card-hotel">
 
                         <div class="tabela-campo campo-base"
                              data-label="ID">
 
-                            @pacote.PacoteId
+                            @reservaHotel.ReservaHotelId
 
                         </div>
 
                         <div class="tabela-campo campo-base"
-                             data-label="ID Passagem">
+                             data-label="Hotel">
 
-                            @pacote.PassagemId
+                            @reservaHotel.NomeHotel
+
+                        </div>
+
+                        <div class="tabela-campo campo-base coluna-2"
+                             data-label="Endereço">
+
+                            @reservaHotel.EnderecoHotel
 
                         </div>
 
                         <div class="tabela-campo campo-base"
-                             data-label="ID reserva hotel">
+                             data-label="Check-in">
 
-                            @pacote.ReservaHotelId
-
-                        </div>
-
-                        <div class="tabela-campo campo-base"
-                             data-label="ID Intérprete">
-
-                            @pacote.InterpreteId
+                            @reservaHotel.DataCheckin.ToString("dd/MM/yyyy HH:mm")
 
                         </div>
 
                         <div class="tabela-campo campo-base"
-                             data-label="Preço">
+                             data-label="Check-out">
 
-                            R$ @pacote.Preco.ToString("N2")
+                            @reservaHotel.DataCheckout.ToString("dd/MM/yyyy HH:mm")
 
                         </div>
+
 
                         <div class="tabela-campo campo-base"
-                             data-label="Destino">
+                             data-label="Preço total">
 
-                            @pacote.Destino
-
-                        </div>
-
-                        <div class="tabela-campo campo-base col-url"
-                             data-label="URL da imagem">
-
-                            <a href="@pacote.UrlImagem"
-                               target="_blank">
-
-                                @(pacote.UrlImagem.Length >= 15
-                                    ? pacote.UrlImagem.Substring(0, 15) + "..."
-                                    : pacote.UrlImagem.ToUpper())
-
-                            </a>
+                            R$ @reservaHotel.Preco.ToString("N2")
 
                         </div>
 
                         <div class="tabela-campo col-acoes">
 
                             <a asp-controller="Admin"
-                               asp-action="EditarPacote"
-                               asp-route-id="@pacote.PacoteId"
+                               asp-action="EditarHotel"
+                               asp-route-id="@reservaHotel.ReservaHotelId"
                                class="acao-link acao-editar">
 
                                 Editar
 
                             </a>
 
-                            <form asp-action="ExcluirPacote"
+                            <form asp-action="ExcluirHotel"
                                   asp-controller="Admin"
                                   method="post"
                                   onsubmit="return confirmarExclusao();">
 
-                                <input type="hidden" name="id" value="@pacote.PacoteId" />
+                                <input type="hidden" name="id" value="@reservaHotel.ReservaHotelId" />
 
                                 <button type="submit"
                                         class="acao-link acao-excluir">
@@ -348,7 +348,7 @@
         document.getElementById("input-busca");
 
     const cards =
-        document.querySelectorAll(".card-pacotes");
+        document.querySelectorAll(".card-hotel");
 
     inputBusca.addEventListener("input", function () {
 
