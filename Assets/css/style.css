@@ -139,9 +139,9 @@ button {
     font-size: 15px;
 }
 
-    #esqueci-senha:hover {
-        color: blue;
-    }
+#esqueci-senha:hover {
+    color: blue;
+}
 
 #tela-login {
     min-height: 90vh;
@@ -217,10 +217,11 @@ button {
     .dados-pessoais h1 {
         font-size: 28px;
         margin-bottom: 5px;
+        color:#1B3B88;
     }
 
     .dados-pessoais p {
-        color: black;
+        color:#1B3B88;
         margin-top: 10px;
         margin-bottom: 30px;
     }
@@ -272,7 +273,7 @@ button {
     }
 
 .btn-azul {
-    background-color: #5985DC;
+    background-color: #1B6ED6;
     color: #ffffff;
     border-color: #1B3B88;
 }
@@ -310,11 +311,14 @@ button {
 /* Tela histórico de pacotes */
 
 .historico h1 {
-    margin-bottom: 10px;
+    color: #1B3B88;
+    margin-top: 5px;
 }
 
-#sub-titulo {
-    margin-top: 25px;
+.sub-titulo {
+    color: #1B3B88;
+    margin-top: 20px;
+    font-weight: bold;
 }
 
 .historico p {
@@ -600,6 +604,14 @@ button {
     width: 100%;
 }
 
+.home-hero-content h1 {
+    color: #1B3B88;
+}
+
+.home-hero-content p {
+    color: #000000;
+}
+
 .home-hero-title {
     font-size: 2rem;
     line-height: 1.2;
@@ -644,7 +656,7 @@ button {
     min-width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #eeeeee;
+    background-color: #eff5ff;
 }
 
 .home-benefits-card-title {
@@ -671,6 +683,7 @@ button {
 
 .home-packages-title {
     font-size: 1.7rem;
+    color: #1B3B88;
 }
 
 .home-packages-link {
@@ -794,6 +807,7 @@ button {
 /* Tela de confirmação de compra */
 
 .compra-de-pacote h1 {
+    color: #1B3B88;
     margin-bottom: 15px;
 }
 
@@ -907,7 +921,7 @@ button {
     text-align: center;
     text-decoration: none;
     padding: 15px;
-    background-color: #5985DC;
+    background-color: #1B6ED6;
     color: #ffffff;
     border: 2px solid #1B3B88;
     border-radius: 10px;
@@ -933,6 +947,7 @@ button {
 }
 
 .revisao-de-pacote h1 {
+    color: #1B3B88;
     margin-bottom: 15px;
 }
 
@@ -1055,6 +1070,10 @@ button {
     padding: 20px;
 }
 
+.titulos-catalogo h1 {
+    color: #1B3B88;
+}
+
 .campo-base {
     display: flex;
     flex-direction: column;
@@ -1113,7 +1132,7 @@ button {
     font-size: 1.6rem;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #000;
+    
 }
 
 .topo-catalogo p {
@@ -1148,11 +1167,12 @@ button {
     left: 14px;
     top: 50%;
     transform: translateY(-50%);
-    color: #666;
+    color: black;
 }
 
 .botao-novo {
-    background-color: #fff;
+    background-color:#1B3B88;
+    color: #ffffff;
     border: 1px solid #ccc;
     padding: 10px 20px;
     border-radius: 6px;
@@ -1161,8 +1181,13 @@ button {
     align-self: flex-end;
     display: flex;
     align-items: center;
+    transition: all 0.3s ease;
     gap: 5px;
     font-size: 0.95rem;
+}
+
+.botao-novo:hover {
+    background-color: #102657;
 }
 
 .tabela-cabecalho {
@@ -1245,12 +1270,12 @@ button {
 /* Tela de cadastro de pacotes */
 
 .cadastro-catalogo h1 {
+    color: #1B3B88;
     font-size: 28px;
     margin-bottom: 5px;
 }
 
 .cadastro-catalogo p {
-    color: black;
     margin-top: 10px;
     margin-bottom: 30px;
 }
@@ -1268,12 +1293,13 @@ button {
 }
 
 .btn-catalogo-salvar {
-    background-color: #333;
-    color: white;
+    background-color: #ffffff;
+    color: #4de068;
 }
 
     .btn-catalogo-salvar:hover {
         background-color: #4de068;
+        color: #ffffff;
     }
 
 /* tela de catálogo */
@@ -1284,6 +1310,11 @@ button {
 
 .catalogo h1 {
     margin-bottom: 15px;
+    color: #1B3B88;
+}
+
+#subtitulo-catalago {
+    color: #1B3B88;
 }
 
 .catalogo p {
@@ -1617,6 +1648,10 @@ button {
         padding: 20px;
     }
 
+    .titulos-catalogo h1 {
+        color: #1B3B88;
+    }
+
     .tabela-campo::before {
         display: none;
     }
@@ -1640,7 +1675,8 @@ button {
     .tabela-cabecalho {
         gap: 16px;
         padding: 0 10px 14px;
-        border-bottom: 2px solid #000;
+        border-bottom: 2px solid #1B6ED6;
+        color: #1B6ED6;
     }
 
     .tabela-linha {
